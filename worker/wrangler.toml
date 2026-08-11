@@ -1,0 +1,17 @@
+name = "regspine-proxy"
+main = "src/worker.js"
+compatibility_date = "2024-11-01"
+
+# Site origin(s) allowed to call the Worker (CORS). Comma-separated if more than
+# one. This is NOT a secret. GitHub Pages serves RegSpine from the org origin.
+[vars]
+ALLOWED_ORIGINS = "https://butter-money.github.io"
+
+# The secrets are NOT stored here — set them once with:
+#   cd worker
+#   npx wrangler secret put ANTHROPIC_API_KEY   # Claude key (needed for PDF input)
+#   npx wrangler secret put GEMINI_API_KEY      # optional
+#   npx wrangler secret put OPENAI_API_KEY      # optional
+#   npx wrangler secret put ACCESS_PASSWORD     # the demo/team access password
+#
+# Or set all provider keys at once from config/keys.json: `npm run sync-secrets`.
