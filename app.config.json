@@ -4,5 +4,5 @@
   "maxTotalMB": 10,
 
   "$comment_proxy": "Empty proxyUrl = bring-your-own-key mode (each user pastes their own Anthropic key). Set it to the deployed regspine-proxy Worker URL to use shared keys held server-side — users then enter the shared ACCESS PASSWORD. NEVER put an API key in this file; it would be exposed on the public site.",
-  "proxyUrl": ""
+  "proxyUrl": "https://regspine-proxy.astrochat.workers.dev"
 }
