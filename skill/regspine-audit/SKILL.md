@@ -158,6 +158,9 @@ scorecard report?*
 - Regulations move. If a rule's effective date matters to the verdict, state the date. If a
   finding hinges on a rule you suspect may have been amended after the rulebooks were written,
   say so in the finding rather than asserting a stale citation.
+- Cite the regulation, not this skill. A finding's rule names the instrument and the
+  requirement. The rulebook filenames and the checklist numbers in this skill are internal
+  working structure — they never appear in a citation a team reads.
 - Cite honestly. Where you're confident of the requirement but not the exact clause number,
   cite the instrument and the requirement and note that the clause needs confirmation. Never
   fabricate a circular number or date.
