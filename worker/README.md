@@ -31,8 +31,7 @@ npx wrangler deploy
 Then load the provider keys. From the repo root:
 
 ```bash
-cp config/keys.example.json config/keys.json   # fill in the real keys
-npm run sync-secrets                           # pushes them into this Worker
+npm run sync        # pushes every key in config/models.json into this Worker
 ```
 
 `wrangler deploy` prints the Worker URL, e.g.
@@ -42,11 +41,12 @@ Wire the site to it:
 
 1. Open [`app.config.json`](../app.config.json) at the repo root.
 2. Set `"proxyUrl"` to your Worker URL.
-3. In [`config/models.json`](../config/models.json), set `available: true` for the
-   providers whose keys you just loaded (and `false` for the rest).
-4. Commit & push — GitHub Pages redeploys automatically.
+3. In `config/models.json`, set `available: true` for the models whose keys you just
+   loaded (and `false` for the rest), then re-run `npm run sync`.
+4. Commit `app.config.json` and `config/models.public.json` — Pages redeploys automatically.
 
-Now the site asks for the **access password** instead of an API key.
+The site asks every user for that **access password**. It never asks for an API key —
+there is no bring-your-own-key path in RegSpine.
 
 ## Configuration
 
@@ -55,8 +55,8 @@ Now the site asks for the **access password** instead of an API key.
   which covers `https://butter-money.github.io/regspine/`. Change it if you move to
   a custom domain, then re-run `npx wrangler deploy`.
 - **Secrets** — `ANTHROPIC_API_KEY`, `GEMINI_API_KEY`, `OPENAI_API_KEY`,
-  `ACCESS_PASSWORD`. Set via `wrangler secret put` or `npm run sync-secrets`
-  (never committed). Rotate any time by re-running the command.
+  `ACCESS_PASSWORD`. Provider keys are set by `npm run sync`; the password is set once by
+  hand with `wrangler secret put` so it never sits in a file. Rotate any time by re-running.
 
 ## Notes & limits
 

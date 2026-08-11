@@ -2,16 +2,18 @@ import Anthropic from '@anthropic-ai/sdk';
 import { SKILL_CONTEXT } from './skill-content';
 import { buildSystemPrompt, buildUserContext } from './prompt';
 import { AUDIT_TOOL, type AuditResult } from './tool-schema';
-import { CONFIG } from './config';
+import { CONFIG, acceptsType, labelForMime, modelsAccepting } from './config';
 
 /**
- * Runs the Module B compliance audit from the browser. Provider is chosen per
- * model (see config/models.json):
+ * Runs the Module B compliance audit from the browser. Every call goes through
+ * the regspine-proxy Worker, which holds the keys — there is no bring-your-own-key
+ * path, so no user ever handles an API key. The proxy routes by provider:
  *
- *  - "anthropic": native Claude Messages API. Direct with the user's key (BYOK),
- *    or via the shared-key proxy. Handles images AND PDFs.
- *  - "google" / "openai": OpenAI-compatible chat-completions via the proxy Worker,
- *    which injects the matching shared key. Images only — PDFs are Claude-only.
+ *  - "anthropic": native Claude Messages API (the only shape that takes PDFs).
+ *  - "google" / "openai": OpenAI-compatible chat-completions.
+ *
+ * Which artifact types a model accepts is data, not code — it comes from the
+ * `artifacts` field of its entry in config/models.json.
  *
  * The system prompt (the skill + rulebooks) and the forced structured-output
  * schema are identical across providers, so the audit itself doesn't change.
@@ -26,7 +28,7 @@ export interface AuditFile {
 }
 
 export interface RunAuditInput {
-  /** BYOK: Anthropic API key. Proxy mode: the shared access password. */
+  /** The shared access password the proxy checks. Never an API key. */
   secret: string;
   model?: string;
   description?: string;
@@ -70,6 +72,24 @@ export async function runAudit(
   const model = input.model?.trim() || DEFAULT_MODEL;
   const provider = providerFor(model);
 
+  if (!CONFIG.proxy.enabled) {
+    throw new Error(
+      'RegSpine is not connected to its key proxy (proxyUrl is empty in app.config.json), so no audit can run. Deploy the proxy — see worker/README.md.'
+    );
+  }
+
+  // Artifact support is declared per model in config/models.json. Fail here with
+  // something actionable rather than letting the provider reject the payload.
+  const unsupported = input.files.find((f) => !acceptsType(model, f.type));
+  if (unsupported) {
+    const alt = modelsAccepting(unsupported.type)[0];
+    throw new Error(
+      `This model doesn't read ${labelForMime(unsupported.type)} files ("${unsupported.name}").${
+        alt ? ` Switch to ${alt.label.split(' — ')[0]}.` : ''
+      }`
+    );
+  }
+
   const images = input.files.filter((f) => SUPPORTED_IMAGE.includes(f.type));
   const pdfs = input.files.filter((f) => f.type === 'application/pdf');
 
@@ -109,21 +129,16 @@ async function runViaAnthropic({
   images,
   pdfs,
 }: ProviderArgs): Promise<AuditResult> {
-  const client = CONFIG.proxy.enabled
-    ? new Anthropic({
-        baseURL: CONFIG.proxy.url,
-        apiKey: 'proxy',
-        dangerouslyAllowBrowser: true,
-        defaultHeaders: {
-          'x-access-password': secret,
-          'anthropic-dangerous-direct-browser-access': 'true',
-        },
-      })
-    : new Anthropic({
-        apiKey: secret,
-        dangerouslyAllowBrowser: true,
-        defaultHeaders: { 'anthropic-dangerous-direct-browser-access': 'true' },
-      });
+  // Always the proxy: the browser sends the access password, never a key.
+  const client = new Anthropic({
+    baseURL: CONFIG.proxy.url,
+    apiKey: 'proxy',
+    dangerouslyAllowBrowser: true,
+    defaultHeaders: {
+      'x-access-password': secret,
+      'anthropic-dangerous-direct-browser-access': 'true',
+    },
+  });
 
   const content: Anthropic.ContentBlockParam[] = [];
   for (const img of images) {
@@ -173,16 +188,9 @@ async function runViaOpenAICompat({
   pdfs,
   path,
 }: ProviderArgs & { path: string }): Promise<AuditResult> {
-  if (!CONFIG.proxy.enabled) {
-    throw new Error(
-      'This model runs through the shared-key proxy, which is not configured. Use a Claude model with your own key, or set up the proxy (see worker/).'
-    );
-  }
-  if (pdfs.length) {
-    throw new Error(
-      'PDF input is supported only on Claude models. Pick a Claude model, or attach screenshots instead of a PDF for this model.'
-    );
-  }
+  // Anything non-image was already rejected in runAudit against the model's
+  // declared artifact list; this shape only carries images.
+  void pdfs;
 
   // OpenAI-compatible message with image_url data URIs.
   const userContent: unknown[] = images.map((img) => ({

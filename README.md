@@ -18,7 +18,8 @@ Audits investor-facing broker/adviser **screens, PDFs and communications** again
 investor-protection surface and returns a **scored report**: per finding, the **cited rule**,
 the **exact fix (with copy)**, and a **CX upside**.
 
-- **Input** — a screen (PNG/JPEG/WebP/GIF/PDF, ≤10 MB) or a pasted flow description.
+- **Input** — a screen or PDF (≤10 MB; accepted types depend on the model) or a pasted flow
+  description.
 - **Journeys** — *Securities / broker & adviser app* (primary), plus loan, embedded insurance,
   consent/DPDP and grievance, so the same auditor covers Butter Money's lending surfaces too.
 - **Always-on** — the banned-pattern checklist: 12 cross-sector patterns plus 3 SEBI additions
@@ -98,22 +99,57 @@ npm install
 npm run dev            # http://localhost:3000
 ```
 
-With no proxy configured the app is in **bring-your-own-key** mode: click **Add key**, paste an
-Anthropic key, run an audit. The key is stored only in your browser and sent only to Anthropic.
+Users never handle an API key — there is no bring-your-own-key path. The only thing anyone
+enters is the shared **access password**, which the proxy checks.
 
-## Configuration — the three files you edit
+## Configuration — `config/models.json` is the file you edit
+
+One entry per model, four things you control: the **name**, the **availability status**, the
+**artifact types** it accepts, and its **key**.
+
+```jsonc
+{
+  "defaultModel": "gemini-2.5-flash",
+  "models": [
+    {
+      "id": "claude-sonnet-5",              // the provider's model id, sent to the API
+      "label": "Claude Sonnet 5",           // the name shown in the dropdown
+      "provider": "anthropic",              // anthropic | google | openai — picks the proxy route
+      "available": true,                    // false = listed, greyed out, red "Unavailable today"
+      "artifacts": "png,jpeg,webp,gif,pdf", // what this model can actually read
+      "key": "sk-ant-…"                     // that provider's API key
+    }
+  ]
+}
+```
+
+After editing, one command:
+
+```bash
+npm run sync
+```
+
+That (1) pushes each provider's key into the proxy Worker as a secret and (2) regenerates
+`config/models.public.json` — the same list with every key stripped. Commit the `.public.json`;
+that's what the site imports and what CI builds from.
 
 | File | Committed? | Holds |
 |---|---|---|
-| [`config/models.json`](config/models.json) | ✅ yes (no secrets) | The **model list** in the dropdown — `id`, `label`, `provider`, `available` — plus `defaultModel`. Set `available: false` to grey a model out with a red "Unavailable today" status. |
-| `config/keys.json` | ❌ **git-ignored** | The **API keys**, keyed by provider. Copy [`config/keys.example.json`](config/keys.example.json) and fill it in. Pushed to the proxy Worker by `npm run sync-secrets`; **never** bundled into the site. |
-| [`app.config.json`](app.config.json) | ✅ yes | `maxTotalMB` and `proxyUrl` (empty = bring-your-own-key; set = shared key via the proxy). |
+| `config/models.json` | ❌ **git-ignored** | **The one you edit.** Names, availability, artifact types, keys. |
+| `config/models.public.json` | ✅ generated | The same list, keys stripped. The only model list the app imports. |
+| [`app.config.json`](app.config.json) | ✅ yes | `maxTotalMB` and `proxyUrl` (the proxy Worker URL). |
 
-> ⚠️ **Never put an API key in the repo or in `app.config.json`.** This is a static site, so
-> anything in the repo ships to every visitor's browser. A shared key must live in the proxy.
+> ⚠️ **Why the split.** This is a static site: anything the app imports is downloaded by every
+> visitor. Keys therefore cannot live in a file the app imports — `npm run sync` is what keeps
+> them in the Worker and out of the bundle. Never put a key in `app.config.json` or
+> `models.public.json`.
 
-`provider` values map to the proxy's upstreams: `anthropic` → the Claude Messages API (**the
-only provider that accepts PDF input**), `google` → Gemini direct, `openai` → OpenAI direct.
+`artifacts` is enforced end to end: it sets the file picker's filter, the dropzone hint, and the
+validation on both file-drop and run — attach a PDF with a Gemini model selected and RegSpine
+tells you which model can read it instead of failing at the API. Today only `anthropic` models
+accept `pdf`.
+
+Adding a model is one entry plus `npm run sync`. No code change.
 
 ## Deploy
 
@@ -126,16 +162,16 @@ npx wrangler secret put ACCESS_PASSWORD
 npx wrangler deploy
 ```
 
-Then load the provider keys and point the site at the Worker:
+Then load the provider keys:
 
 ```bash
-cp config/keys.example.json config/keys.json   # add the real keys
-npm run sync-secrets                           # pushes them into regspine-proxy
+npm run sync        # bootstraps config/models.json on first run, then push keys
 ```
 
-Set `proxyUrl` in `app.config.json` to the Worker URL, flip `available` in
-`config/models.json` for the providers you loaded, and commit. Full detail and the rollback
-path: [`worker/README.md`](worker/README.md).
+Run it once to have `config/models.json` created for you, fill in the keys and flip
+`available`, then run it again. Set `proxyUrl` in `app.config.json` to the Worker URL and
+commit that plus `config/models.public.json`. Full detail and the rollback path:
+[`worker/README.md`](worker/README.md).
 
 ### 2. The site
 
@@ -171,14 +207,14 @@ components/
   TopBar.tsx              wordmark + module switcher
 lib/
   config.ts               reads app.config.json + config/models.json
-  audit-client.ts         calls the model from the browser — direct (BYOK) or via the proxy
+  audit-client.ts         calls the model from the browser, always via the proxy
   prompt.ts               builds the system prompt from the skill
   tool-schema.ts          submit_audit tool → the scorecard shape
   skill-content.ts        generated from skill/ on dev/build (git-ignored)
 scripts/
   embed-skill.mjs         embeds the rulebooks into the build
-  sync-secrets.mjs        pushes config/keys.json into the proxy Worker
-  rollback-all.mjs        deletes ONLY regspine-proxy and reverts to BYOK
+  sync.mjs                pushes keys into the proxy Worker + writes models.public.json
+  rollback-all.mjs        kill switch — deletes ONLY regspine-proxy and clears proxyUrl
 skill/regspine-audit/     the audit logic — SKILL.md + references/*.md (source of truth)
 worker/                   regspine-proxy (Cloudflare Worker) + deploy guide
 .github/workflows/deploy.yml
@@ -186,8 +222,8 @@ worker/                   regspine-proxy (Cloudflare Worker) + deploy guide
 
 ## Limits & notes
 
-- **Attachments:** PNG · JPEG · WebP · GIF · PDF, up to **10 MB** total per audit. PDFs are
-  Claude-only; the app tells you before spending a call.
+- **Attachments:** up to **10 MB** total per audit; which types are accepted comes from the
+  selected model's `artifacts` field, and the app tells you before spending a call.
 - **Screenshots beat text.** Component-level findings (pre-ticked boxes, CTA weights, whether a
   risk disclosure is above the fold) need pixels. Text-only reviews explicitly flag what can't
   be visually confirmed.

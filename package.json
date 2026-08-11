@@ -10,7 +10,7 @@
     "prebuild": "node scripts/embed-skill.mjs",
     "build": "next build",
     "lint": "next lint",
-    "sync-secrets": "node scripts/sync-secrets.mjs",
+    "sync": "node scripts/sync.mjs",
     "rollback": "node scripts/rollback-all.mjs"
   },
   "dependencies": {

@@ -1,7 +1,0 @@
-{
-  "$comment": "CONFIG FILE 2 of 2 — API keys, keyed by the `provider` used in models.json. COPY this to config/keys.json (git-ignored) and put the real keys there. NEVER commit real keys. They are NOT bundled into the website — `npm run sync-secrets` pushes them into the regspine-proxy Cloudflare Worker (server-side only). Leave a value out or blank to skip that provider, and set that provider's models to `available: false` in models.json.",
-
-  "anthropic": "sk-ant-REPLACE-ME",
-  "google": "REPLACE-ME-google-ai-studio-key",
-  "openai": "sk-REPLACE-ME"
-}

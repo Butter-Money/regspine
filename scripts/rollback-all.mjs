@@ -1,5 +1,8 @@
-// ONE-COMMAND ROLLBACK — undoes the entire Cloudflare shared-key proxy setup and
-// returns the site to bring-your-own-key mode. Run: `npm run rollback`.
+// ONE-COMMAND ROLLBACK — tears down the Cloudflare key proxy. Run: `npm run rollback`.
+//
+// RegSpine has no bring-your-own-key fallback, so after this the site cannot run
+// audits until `proxyUrl` points at a proxy again. That is the intent: it is the
+// kill switch for a leaked access password or a runaway spend.
 //
 // SAFETY: this touches ONLY the Worker named below. It never lists, modifies, or
 // deletes any other Worker in the account — in particular it will not touch
@@ -9,7 +12,7 @@
 //
 // What it does:
 //   1. Deletes the `regspine-proxy` Worker (and its secrets) from Cloudflare.
-//   2. Sets proxyUrl back to "" in app.config.json (site reverts to BYOK).
+//   2. Sets proxyUrl back to "" in app.config.json (site stops calling any model).
 // It then tells you to commit + push. Nothing else is affected.
 //
 // Auth: CLOUDFLARE_API_TOKEN + CLOUDFLARE_ACCOUNT_ID in the environment, or
@@ -39,12 +42,12 @@ if (del.status !== 0) {
   );
 }
 
-// 2) Revert proxyUrl → "" so the site goes back to bring-your-own-key.
+// 2) Revert proxyUrl → "" so the site stops pointing at a dead proxy.
 const cfg = JSON.parse(readFileSync(APP_CONFIG, 'utf8'));
 const had = cfg.proxyUrl;
 cfg.proxyUrl = '';
 writeFileSync(APP_CONFIG, JSON.stringify(cfg, null, 2) + '\n', 'utf8');
-console.log(`\napp.config.json proxyUrl: "${had}" → "" (back to bring-your-own-key).`);
+console.log(`\napp.config.json proxyUrl: "${had}" → "" (audits disabled until a proxy is set).`);
 
 console.log(
   `\nRollback complete for "${WORKER_NAME}". No other Worker or system was touched.\n` +

@@ -24,8 +24,9 @@ next-env.d.ts
 # generated from skill/ on predev/prebuild — source of truth is skill/
 /lib/skill-content.ts
 
-# real API keys — NEVER commit. Copy config/keys.example.json → config/keys.json.
-/config/keys.json
+# the editable model config — holds real API keys. NEVER commit.
+# scripts/sync.mjs generates the key-free config/models.public.json, which IS committed.
+/config/models.json
 
 # internal planning docs — not for the public repo
 /docs/

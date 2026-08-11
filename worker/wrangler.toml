@@ -14,4 +14,4 @@ ALLOWED_ORIGINS = "https://butter-money.github.io"
 #   npx wrangler secret put OPENAI_API_KEY      # optional
 #   npx wrangler secret put ACCESS_PASSWORD     # the demo/team access password
 #
-# Or set all provider keys at once from config/keys.json: `npm run sync-secrets`.
+# Or set all provider keys at once from config/models.json: `npm run sync`.
