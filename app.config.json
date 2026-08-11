@@ -1,0 +1,8 @@
+{
+  "$comment": "App-level settings. The MODEL LIST lives in config/models.json; API KEYS live in config/keys.json (git-ignored) and are pushed to the proxy Worker via `npm run sync-secrets`.",
+
+  "maxTotalMB": 10,
+
+  "$comment_proxy": "Empty proxyUrl = bring-your-own-key mode (each user pastes their own Anthropic key). Set it to the deployed regspine-proxy Worker URL to use shared keys held server-side — users then enter the shared ACCESS PASSWORD. NEVER put an API key in this file; it would be exposed on the public site.",
+  "proxyUrl": ""
+}

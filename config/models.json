@@ -1,0 +1,16 @@
+{
+  "$comment": "CONFIG FILE 1 of 2 — the models shown in RegSpine's Model dropdown. `provider` maps to a key in config/keys.json and to an upstream route on the proxy Worker: 'anthropic' = native Claude Messages API (the only provider that accepts PDF input), 'google' = Gemini direct via a Google AI Studio key, 'openai' = OpenAI direct. Set `available: false` to keep a model listed but greyed out with a red 'Unavailable today' status; flip it to true once that provider's key is in config/keys.json AND has been pushed with `npm run sync-secrets`. Adding a new model = one entry here, no code change.",
+
+  "defaultModel": "claude-sonnet-5",
+  "models": [
+    { "id": "claude-sonnet-5", "label": "Claude Sonnet 5 — recommended (PDF + images)", "provider": "anthropic", "available": true },
+    { "id": "claude-opus-5", "label": "Claude Opus 5 — maximum rigor (PDF + images)", "provider": "anthropic", "available": true },
+    { "id": "claude-haiku-4-5-20251001", "label": "Claude Haiku 4.5 — fastest, lowest cost (PDF + images)", "provider": "anthropic", "available": true },
+
+    { "id": "gemini-2.5-pro", "label": "Gemini 2.5 Pro — Direct (images only)", "provider": "google", "available": true },
+    { "id": "gemini-2.5-flash", "label": "Gemini 2.5 Flash — Direct (images only)", "provider": "google", "available": true },
+
+    { "id": "gpt-4.1", "label": "GPT-4.1 — Direct (images only)", "provider": "openai", "available": false },
+    { "id": "gpt-4o", "label": "GPT-4o — Direct (images only)", "provider": "openai", "available": false }
+  ]
+}
