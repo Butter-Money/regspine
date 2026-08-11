@@ -1,0 +1,84 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# Permissions the deploy needs to publish to Pages via OIDC.
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Never run two Pages deploys at once; let an in-flight one finish.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      # Resolves the correct base path for THIS Pages site: "" for a root-served
+      # private (Enterprise) site at *.pages.github.io, or "/<repo>" for a public
+      # project site at <org>.github.io/<repo>. No hard-coding either way.
+      - uses: actions/configure-pages@v5
+        id: pages
+
+      - run: npm ci
+
+      - name: Build static site
+        env:
+          GITHUB_PAGES: 'true'
+          PAGES_BASE_PATH: ${{ steps.pages.outputs.base_path }}
+        run: npm run build
+
+      # Stop GitHub Pages' Jekyll from dropping Next's _next/ assets.
+      - run: touch out/.nojekyll
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: out
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: https://butter-money.github.io/regspine/
+    steps:
+      # GitHub Pages' deploy step intermittently returns "Deployment failed, try
+      # again later" — a transient backend error unrelated to the build. Retry up
+      # to 3 times with backoff so a flaky deploy doesn't fail the whole run.
+      - name: Deploy to Pages (attempt 1)
+        id: d1
+        uses: actions/deploy-pages@v4
+        continue-on-error: true
+
+      - name: Backoff before retry
+        if: steps.d1.outcome == 'failure'
+        run: sleep 45
+
+      - name: Deploy to Pages (attempt 2)
+        id: d2
+        if: steps.d1.outcome == 'failure'
+        uses: actions/deploy-pages@v4
+        continue-on-error: true
+
+      - name: Backoff before final attempt
+        if: steps.d1.outcome == 'failure' && steps.d2.outcome == 'failure'
+        run: sleep 60
+
+      # Final attempt — no continue-on-error, so if this also fails the run fails.
+      - name: Deploy to Pages (attempt 3)
+        id: d3
+        if: steps.d1.outcome == 'failure' && steps.d2.outcome == 'failure'
+        uses: actions/deploy-pages@v4
