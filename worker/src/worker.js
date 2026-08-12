@@ -38,7 +38,13 @@ export default {
     const allowOrigin = resolveOrigin(origin, env);
 
     if (request.method === 'OPTIONS') {
-      return new Response(null, { status: 204, headers: cors(allowOrigin) });
+      // Reflect whatever headers the caller asked for. The Anthropic browser SDK
+      // sends a set of x-stainless-* telemetry headers that changes between
+      // versions, and a static allowlist silently breaks the Claude path with a
+      // preflight failure the moment one is added. CORS is not the security
+      // boundary here — ACCESS_PASSWORD is, and it is checked on the real request.
+      const requested = request.headers.get('Access-Control-Request-Headers');
+      return new Response(null, { status: 204, headers: cors(allowOrigin, requested) });
     }
     if (request.method !== 'POST') {
       return json({ error: { message: 'Method not allowed.' } }, 405, allowOrigin);
@@ -155,14 +161,17 @@ function resolveOrigin(origin, env) {
   return list.includes(origin) ? origin : list[0];
 }
 
-function cors(allowOrigin) {
+function cors(allowOrigin, requestedHeaders) {
   return new Headers({
     'Access-Control-Allow-Origin': allowOrigin,
     'Access-Control-Allow-Methods': 'POST, OPTIONS',
+    // On a preflight, echo the requested headers; otherwise fall back to the set
+    // we know the app sends.
     'Access-Control-Allow-Headers':
+      requestedHeaders ||
       'content-type, x-access-password, x-api-key, anthropic-version, anthropic-beta, anthropic-dangerous-direct-browser-access',
     'Access-Control-Max-Age': '86400',
-    Vary: 'Origin',
+    Vary: 'Origin, Access-Control-Request-Headers',
   });
 }
 
