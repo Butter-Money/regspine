@@ -170,7 +170,12 @@ function cors(allowOrigin, requestedHeaders) {
     'Access-Control-Allow-Headers':
       requestedHeaders ||
       'content-type, x-access-password, x-api-key, anthropic-version, anthropic-beta, anthropic-dangerous-direct-browser-access',
-    'Access-Control-Max-Age': '86400',
+    // Deliberately short. A browser caches the preflight ANSWER, so a stale one
+    // keeps rejecting requests the proxy would now accept — which is exactly how
+    // the x-stainless-* header change broke Claude for 24h in an already-open
+    // browser. Five minutes keeps that self-healing; the extra preflights are one
+    // cheap round-trip against an audit that takes ~80 seconds.
+    'Access-Control-Max-Age': '300',
     Vary: 'Origin, Access-Control-Request-Headers',
   });
 }
