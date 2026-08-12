@@ -54,17 +54,23 @@ there is no bring-your-own-key path in RegSpine.
   allowed to call the Worker via CORS. Default is `https://butter-money.github.io`,
   which covers `https://butter-money.github.io/regspine/`. Change it if you move to
   a custom domain, then re-run `npx wrangler deploy`.
-- **Secrets** — `ANTHROPIC_API_KEY`, `GEMINI_API_KEY`, `OPENAI_API_KEY`,
-  `ACCESS_PASSWORD`. Provider keys are set by `npm run sync`; the password is set once by
-  hand with `wrangler secret put` so it never sits in a file. Rotate any time by re-running.
+- **Secrets** — `ANTHROPIC_API_KEY`, `GEMINI_API_KEY`, `OPENAI_API_KEY`, `ALLOWED_MODELS`,
+  `ACCESS_PASSWORD`. Provider keys and `ALLOWED_MODELS` are set by `npm run sync`; the password
+  is set once by hand with `wrangler secret put` so it never sits in a file. Rotate any time by
+  re-running.
+- **`ALLOWED_MODELS`** — comma-separated model ids this proxy will run; anything else gets a
+  403. Not secret, but stored as a secret so `npm run sync` can update it without a redeploy.
+  It exists because provider keys are **account-wide**: a console key cannot be scoped to one
+  model, so the proxy is the only place a model restriction can live.
 
 ## Notes & limits
 
-- The password gate stops random visitors who find the Worker URL from spending
-  your credits. Anyone with the password can use the shared keys, so treat it as a
-  shared password and rotate if it leaks. **Put a monthly spend limit on each key
-  in the provider console as a backstop** — this matters more than usual here,
-  because the password is published in the submission form and shown in the video.
+- The password gate stops random visitors who find the Worker URL from spending your credits,
+  and `ALLOWED_MODELS` caps what they could run even with it. Anyone with the password can
+  still use the shared keys on the enabled models, so treat it as a shared password and rotate
+  if it leaks. **Put a monthly spend limit on each key in the provider console as a backstop**
+  — this matters more than usual here, because the password is published in the submission
+  form and shown in the video.
 - The Worker only forwards the three POST routes listed in
   [`src/worker.js`](./src/worker.js) and nothing else.
 - Undo everything with `npm run rollback` from the repo root — it deletes **only**

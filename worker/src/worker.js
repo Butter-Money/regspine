@@ -11,8 +11,16 @@
  *   GEMINI_API_KEY      (secret) — Google AI Studio key for Gemini direct, optional.
  *   OPENAI_API_KEY      (secret) — OpenAI key, optional.
  *   ACCESS_PASSWORD     (secret) — shared password the site must send.
+ *   ALLOWED_MODELS      (secret) — comma-separated model ids this proxy will run.
+ *                                  Not actually secret; stored as one so `npm run
+ *                                  sync` can update it without a redeploy.
  *   ALLOWED_ORIGINS     (var)    — comma-separated site origins allowed via CORS,
  *                                  e.g. "https://butter-money.github.io".
+ *
+ * Why ALLOWED_MODELS exists: provider API keys are account-wide — a console key
+ * cannot be scoped to one model. So the only place a model restriction can live
+ * is here. Without it, anyone holding the access password could send any model id
+ * (including a far more expensive one) and bill it to these keys.
  *
  * Upstreams, all password-gated (keep in sync with lib/audit-client.ts):
  *   POST /v1/messages                 → api.anthropic.com      (Claude models)
@@ -54,6 +62,32 @@ export default {
       );
     }
 
+    // Read the body once so the model can be checked before anything is spent.
+    // Every upstream here takes `model` at the top level of the JSON payload.
+    const raw = await request.text();
+    let payload;
+    try {
+      payload = JSON.parse(raw);
+    } catch {
+      return json({ error: { message: 'Body is not valid JSON.' } }, 400, allowOrigin);
+    }
+
+    const allowedModels = (env.ALLOWED_MODELS || '')
+      .split(',')
+      .map((s) => s.trim())
+      .filter(Boolean);
+    if (allowedModels.length && !allowedModels.includes(payload.model)) {
+      return json(
+        {
+          error: {
+            message: `Model "${payload.model}" is not enabled on this proxy. Enabled: ${allowedModels.join(', ')}.`,
+          },
+        },
+        403,
+        allowOrigin
+      );
+    }
+
     const url = new URL(request.url);
 
     // Route by path to the matching upstream, injecting that provider's key.
@@ -69,7 +103,7 @@ export default {
           'content-type': 'application/json',
           authorization: `Bearer ${env.GEMINI_API_KEY}`,
         },
-        body: request.body,
+        body: raw,
       });
     } else if (url.pathname.endsWith('/openai/v1/chat/completions')) {
       if (!env.OPENAI_API_KEY) {
@@ -81,7 +115,7 @@ export default {
           'content-type': 'application/json',
           authorization: `Bearer ${env.OPENAI_API_KEY}`,
         },
-        body: request.body,
+        body: raw,
       });
     } else if (url.pathname.endsWith('/v1/messages')) {
       if (!env.ANTHROPIC_API_KEY) {
@@ -97,7 +131,7 @@ export default {
             ? { 'anthropic-beta': request.headers.get('anthropic-beta') }
             : {}),
         },
-        body: request.body,
+        body: raw,
       });
     } else {
       return json({ error: { message: 'Not found.' } }, 404, allowOrigin);

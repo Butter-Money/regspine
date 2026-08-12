@@ -104,20 +104,27 @@ enters is the shared **access password**, which the proxy checks.
 
 ## Configuration — `config/models.json` is the file you edit
 
-One entry per model, four things you control: the **name**, the **availability status**, the
-**artifact types** it accepts, and its **key**.
+One file, two sections. Keys sit in `providers` because that is what they actually are:
+**a console key authorises an account, not a model** — there is no such thing as a
+per-model API key.
 
 ```jsonc
 {
   "defaultModel": "gemini-2.5-flash",
-  "models": [
+
+  "providers": {                          // ONE key per provider
+    "anthropic": { "key": "sk-ant-…" },   // console.anthropic.com — account-wide
+    "google":    { "key": "AIza…" },      // Google AI Studio
+    "openai":    { "key": "sk-…" }        // platform.openai.com — account-wide
+  },
+
+  "models": [                             // what appears in the dropdown
     {
-      "id": "claude-sonnet-5",              // the provider's model id, sent to the API
-      "label": "Claude Sonnet 5",           // the name shown in the dropdown
-      "provider": "anthropic",              // anthropic | google | openai — picks the proxy route
+      "id": "claude-sonnet-5",              // model id sent to the API
+      "label": "Claude Sonnet 5",           // name shown in the dropdown
+      "provider": "anthropic",              // which key it bills to
       "available": true,                    // false = listed, greyed out, red "Unavailable today"
-      "artifacts": "png,jpeg,webp,gif,pdf", // what this model can actually read
-      "key": "sk-ant-…"                     // that provider's API key
+      "artifacts": "png,jpeg,webp,gif,pdf"  // what this model can read
     }
   ]
 }
@@ -129,14 +136,26 @@ After editing, one command:
 npm run sync
 ```
 
-That (1) pushes each provider's key into the proxy Worker as a secret and (2) regenerates
-`config/models.public.json` — the same list with every key stripped. Commit the `.public.json`;
-that's what the site imports and what CI builds from.
+### What actually restricts which model runs
+
+The key can't, so three other things do:
+
+1. **`available: false`** — the model is listed but greyed out and not runnable in the UI.
+2. **The request** — the app sends the selected `id`; that is what picks the model.
+3. **`ALLOWED_MODELS` on the proxy** — `npm run sync` pushes the ids of the available models
+   to the Worker, which **rejects any other model id with a 403**. This is the only real
+   restriction, and the one a key cannot give you: without it, anyone holding the access
+   password could point your account-wide key at a far more expensive model.
+
+`npm run sync` does all three jobs: pushes each provider key into the Worker as a secret,
+pushes `ALLOWED_MODELS`, and regenerates `config/models.public.json` — the model list with the
+whole `providers` section dropped. Commit the `.public.json`; that's what the site imports and
+what CI builds from.
 
 | File | Committed? | Holds |
 |---|---|---|
-| `config/models.json` | ❌ **git-ignored** | **The one you edit.** Names, availability, artifact types, keys. |
-| `config/models.public.json` | ✅ generated | The same list, keys stripped. The only model list the app imports. |
+| `config/models.json` | ❌ **git-ignored** | **The one you edit.** Provider keys + the model list. |
+| `config/models.public.json` | ✅ generated | The model list, no `providers` section. The only model list the app imports. |
 | [`app.config.json`](app.config.json) | ✅ yes | `maxTotalMB` and `proxyUrl` (the proxy Worker URL). |
 
 > ⚠️ **Why the split.** This is a static site: anything the app imports is downloaded by every
