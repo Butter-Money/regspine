@@ -4,7 +4,9 @@ Synthetic, non-compliant mock screens for testing RegSpine and for demos. These 
 **fictional** — "ZenTrade" is not a real intermediary and no real product is depicted.
 Each one has known violations planted so you can check that the auditor finds them.
 
-## `broker-account-activation.png`
+## `broker-account-activation.png` / `.pdf`
+
+The same screen in both forms — the PDF exercises the Claude-only PDF path.
 
 A broker segment-activation screen. Planted violations:
 
