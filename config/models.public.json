@@ -20,28 +20,28 @@
       "id": "claude-sonnet-5",
       "label": "Claude Sonnet 5 — recommended",
       "provider": "anthropic",
-      "available": false,
+      "available": true,
       "artifacts": "png,jpeg,webp,gif,pdf"
     },
     {
       "id": "claude-opus-5",
       "label": "Claude Opus 5 — maximum rigor",
       "provider": "anthropic",
-      "available": false,
+      "available": true,
       "artifacts": "png,jpeg,webp,gif,pdf"
     },
     {
       "id": "claude-haiku-4-5-20251001",
       "label": "Claude Haiku 4.5 — fastest, lowest cost",
       "provider": "anthropic",
-      "available": false,
+      "available": true,
       "artifacts": "png,jpeg,webp,gif,pdf"
     },
     {
       "id": "gpt-4.1",
       "label": "GPT-4.1 — Direct",
       "provider": "openai",
-      "available": false,
+      "available": true,
       "artifacts": "png,jpeg,webp,gif"
     },
     {
