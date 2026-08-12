@@ -385,7 +385,8 @@ export default function Home() {
               <div className="spinner" />
               <div>{LOADING_STEPS[loadingStep]}</div>
               <div className="steps">
-                Running the full rulebook audit — this usually takes 20–60 seconds.
+                Running the full rulebook audit — usually 30–90 seconds, longer on
+                the more thorough models.
               </div>
             </div>
           </div>
