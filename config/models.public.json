@@ -25,9 +25,9 @@
     },
     {
       "id": "claude-opus-5",
-      "label": "Claude Opus 5 — maximum rigor",
+      "label": "Claude Opus 5 — maximum rigor (disabled: ~5x Sonnet cost)",
       "provider": "anthropic",
-      "available": true,
+      "available": false,
       "artifacts": "png,jpeg,webp,gif,pdf"
     },
     {
