@@ -36,3 +36,13 @@ next-env.d.ts
 *.log
 .idea
 .vscode
+
+# --- Module A (modulea/) ---
+# SEBI source PDFs: ~17MB of public documents, fetched not vendored
+/modulea/data/corpus/*.pdf
+/modulea/.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+/modulea/.env
