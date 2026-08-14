@@ -1,0 +1,62 @@
+# Model routing and cost caps (BuildSpec §7).
+#
+# Non-negotiable #6 — the LLM is a scalpel. Cheap models do the mechanical jobs;
+# only extraction and change-alignment get a frontier model, and only after the
+# deterministic pipeline has narrowed the input to a single clause group.
+#
+# API keys are NOT here. llm.py reads ANTHROPIC_API_KEY from the environment
+# (§11: secrets via env, no keys in the repo).
+
+fx:
+  # Used only to express the run budget in rupees. Rough by design — the cap is a
+  # safety rail, not an accounting system.
+  usd_to_inr: 85.0
+
+pricing:
+  # USD per million tokens. VERIFY against console.anthropic.com before relying on
+  # these for anything but the cap; they are a spend guard, not a billing source.
+  claude-sonnet-5:
+    input: 3.00
+    output: 15.00
+    cache_write: 3.75
+    cache_read: 0.30
+  claude-haiku-4-5-20251001:
+    input: 1.00
+    output: 5.00
+    cache_write: 1.25
+    cache_read: 0.10
+  claude-opus-5:
+    input: 15.00
+    output: 75.00
+    cache_write: 18.75
+    cache_read: 1.50
+
+routing:
+  # Page repair only ever sees pages named in the coverage manifest.
+  page_repair:
+    model: claude-haiku-4-5-20251001
+    max_tokens: 2000
+  categorise_clause:
+    model: claude-haiku-4-5-20251001
+    max_tokens: 1000
+    # Below this confidence the clause is re-run on the escalation model.
+    escalate_below: 0.65
+    escalate_to: claude-sonnet-5
+  extract_obligations:
+    model: claude-sonnet-5
+    max_tokens: 4000
+  align_change:
+    model: claude-sonnet-5
+    max_tokens: 2000
+  judge:
+    model: claude-sonnet-5
+    max_tokens: 1000
+
+budget:
+  # A run aborts rather than exceeding this. The failure mode being guarded
+  # against is a loop over ~1,500 clauses, not any single call.
+  per_run_inr: 200.0
+  warn_at_inr: 100.0
+  # Hard ceiling on calls per run, independent of cost — catches a retry storm
+  # that is individually cheap.
+  max_calls: 400

@@ -1,0 +1,19 @@
+# Confidence and gate thresholds (BuildSpec §4.4, §9).
+
+confidence:
+  # At or above tau_high a fully grounded obligation is auto-accepted.
+  tau_high: 0.80
+  # Below tau_low the categoriser escalates to the stronger model.
+  tau_low: 0.65
+
+gate:
+  # Share of the action's salient terms that must appear in the cited clause.
+  keyterm_coverage: 0.55
+  keyterm_fuzz: 82
+  # Groundedness score below which an obligation cannot be auto-accepted.
+  min_score: 0.80
+
+eval:
+  section_recall: 1.0          # M1 gate, currently met
+  max_broken_citation_rate: 0.01
+  min_groundedness: 0.99       # M2 gate

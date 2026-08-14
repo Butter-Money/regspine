@@ -1,0 +1,42 @@
+# Controlled vocabulary (BuildSpec §4.2). Closed sets, so tags are comparable
+# across versions and a drifting label shows up as a validation error rather than
+# as a silent new category.
+
+obligation_type:
+  - registration
+  - conduct
+  - disclosure
+  - reporting
+  - risk_management
+  - investor_protection
+  - grievance
+  - technology
+  - audit
+  - governance
+
+applies_to:
+  - stock_broker
+  - trading_member
+  - clearing_member
+  - qualified_stock_broker
+  - depository_participant
+  - stock_exchange
+  - clearing_corporation
+  - authorised_person
+  - merchant_banker
+  - investor
+
+trigger_class: [periodic, event_driven, one_time, conditional]
+
+criticality: [binding, advisory]
+
+evidence_class:
+  - report_filed
+  - statement_to_client
+  - disclosure_published
+  - register_maintained
+  - audit_report
+  - system_control
+  - policy_document
+  - board_approval
+  - none
