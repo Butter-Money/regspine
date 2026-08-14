@@ -173,14 +173,21 @@ class CoverageManifest(BaseModel):
 
 
 class ChangeEntry(BaseModel):
-    """One row of Annexure A ("List of Changes") — change-detection ground truth (§6.4)."""
+    """One row of Annexure A ("List of Changes") — change-detection ground truth (§6.4).
+
+    Present in only one document of the corpus (the Aug-2024 Stock-Broker
+    circular); May-2024, Jun-2025 and Merchant Bankers carry no change list.
+    """
 
     s_no: int | None = None
     description: str
     page_para_ref: str | None = None
     source_circular_no: str | None = None
     referenced_pages: list[int] = Field(default_factory=list)
-    referenced_paras: list[int] = Field(default_factory=list)
+    # Dotted paragraph paths as SEBI writes them — "41.9", "15.8.1.1" — which
+    # line up with Anchor.clause_path, not with section numbers. Strings, not
+    # ints: "41.9" is an address, not a quantity.
+    referenced_paras: list[str] = Field(default_factory=list)
 
 
 class AppendixEntry(BaseModel):
