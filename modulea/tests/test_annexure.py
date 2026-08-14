@@ -29,8 +29,8 @@ CORPUS = {
 
 
 @pytest.fixture(scope="session")
-def docs() -> dict:
-    return {name: load_document(path) for name, path in CORPUS.items()}
+def docs(load_cached) -> dict:
+    return {name: load_cached(path) for name, path in CORPUS.items()}
 
 
 def test_annexure_a_exists_only_in_aug2024(docs):

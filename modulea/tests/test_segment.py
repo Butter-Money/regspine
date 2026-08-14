@@ -21,10 +21,10 @@ VERSIONS = list(CORPUS)
 
 
 @pytest.fixture(scope="session")
-def segmented() -> dict:
+def segmented(load_cached) -> dict:
     out = {}
     for name, path in CORPUS.items():
-        doc = load_document(path)
+        doc = load_cached(path)
         entries, _ = build_section_index(doc)
         toc = find_toc_pages(doc)
         body_start = doc.pages[toc[-1]].char_start if toc else 0

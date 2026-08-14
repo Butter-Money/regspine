@@ -118,6 +118,18 @@ def parse_header(first_pages_text: str) -> Header:
 # ---------------------------------------------------------------- TOC parsing
 
 
+# TOC entries are typeset with dot leaders ("Deployment of Funds .......... 6"),
+# which are decoration, not title. They must be stripped before the title is used
+# for heading matching or stored as section_title.
+RE_DOT_LEADER = re.compile(r"[.\u2026]{3,}\s*\d*\s*$")
+
+
+def clean_title(raw: str) -> str:
+    title = re.sub(r"\s+", " ", raw or "").strip()
+    title = RE_DOT_LEADER.sub("", title).strip()
+    return title.strip(" .\u2026-")
+
+
 def _cell(row: list, i: int) -> str:
     if i >= len(row) or row[i] is None:
         return ""
@@ -166,7 +178,7 @@ def parse_toc_rows(rows: list[list]) -> list[SectionIndexEntry]:
                     block=block,
                     part=part,
                     section_no=int(m.group(1)),
-                    title=c1,
+                    title=clean_title(c1),
                     start_page=page,
                 )
             )

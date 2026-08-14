@@ -22,10 +22,10 @@ STOCK_BROKER_VERSIONS = list(CORPUS)
 
 
 @pytest.fixture(scope="session")
-def parsed() -> dict:
+def parsed(load_cached) -> dict:
     out = {}
     for name, (path, _) in CORPUS.items():
-        doc = load_document(path)
+        doc = load_cached(path)
         entries, gaps = build_section_index(doc)
         out[name] = (doc, entries, gaps)
     return out
@@ -103,6 +103,6 @@ def test_parts_are_recorded_even_though_not_contiguous(parsed, version):
 def test_section_index_is_idempotent(parsed, version):
     """Non-negotiable #2: re-parsing the same file yields an identical index."""
     path = CORPUS[version][0]
-    entries_a = [e.model_dump() for e in build_section_index(load_document(path))[0]]
+    entries_a = [e.model_dump() for e in build_section_index(load_document(path))[0]]  # fresh parse on purpose
     _, entries_b, _ = parsed[version]
     assert entries_a == [e.model_dump() for e in entries_b]

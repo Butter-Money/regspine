@@ -1,0 +1,891 @@
+[
+  {
+    "s_no": 1,
+    "circular_no": "SEBI communication SE/10118 dated October 12, 1992.",
+    "circular_date": "October 12, 1992",
+    "subject": "Listing fees from 1992-93 to 1996-97.",
+    "status": null
+  },
+  {
+    "s_no": 2,
+    "circular_no": "SMD/SED/CIR/93/23321 dated November 18, 1993.",
+    "circular_date": "November 18, 1993",
+    "subject": "Regulation Of Transactions Between Clients and Brokers.",
+    "status": null
+  },
+  {
+    "s_no": 3,
+    "circular_no": "SMD/VRN/1476/95 dated April 27, 1995.",
+    "circular_date": "April 27, 1995",
+    "subject": "Severance of connections with other businesses.",
+    "status": null
+  },
+  {
+    "s_no": 4,
+    "circular_no": "SMD/POLICY/CIR-6/97 dated May 07, 1997.",
+    "circular_date": "May 07, 1997",
+    "subject": "Applicability of Rule 8(1)(f) and 8(3)(f) of the Securities Contract (Regulation) Rules, 1957.",
+    "status": null
+  },
+  {
+    "s_no": 5,
+    "circular_no": "SMD/POLICY/CIRCULAR/30/97 dated November 25, 1997",
+    "circular_date": "November 25, 1997",
+    "subject": "Registration of Brokers.",
+    "status": null
+  },
+  {
+    "s_no": 6,
+    "circular_no": "SMD/POLICY/CIR-34/97 dated December 11, 1997.",
+    "circular_date": "December 11, 1997",
+    "subject": "Conversion of individual membership into Corporate membership.",
+    "status": null
+  },
+  {
+    "s_no": 7,
+    "circular_no": "SMD/POLICY/CIR-11/98 dated March 16, 1998.",
+    "circular_date": "March 16, 1998",
+    "subject": "Additional information to be submitted at the time of registration of Stock Broker with SEBI.",
+    "status": null
+  },
+  {
+    "s_no": 8,
+    "circular_no": "FITTC/DC/CR-1/98 dated June 16, 1998.",
+    "circular_date": "June 16, 1998",
+    "subject": "Derivatives Trading in India.",
+    "status": null
+  },
+  {
+    "s_no": 9,
+    "circular_no": "SMD/POLICY(BRK.REG.)/CIR- 18/98 dated July 09, 1998.",
+    "circular_date": "July 09, 1998",
+    "subject": "Merger/ Amalgamation of Trading Members.",
+    "status": null
+  },
+  {
+    "s_no": 10,
+    "circular_no": "SMDRP/POLICY/CIR- 06/2000 dated January 31, 2000.",
+    "circular_date": "January 31, 2000",
+    "subject": "Conditions to be met by Broker for providing Internet Based Trading Service.",
+    "status": null
+  },
+  {
+    "s_no": 11,
+    "circular_no": "SMDRP/Policy/Cir-48/2000 dated October 11, 2000.",
+    "circular_date": "October 11, 2000",
+    "subject": "Securities Trading through Wireless medium on Wireless Application Protocol (WAP) platform.",
+    "status": null
+  },
+  {
+    "s_no": 12,
+    "circular_no": "SMDRP/POLICY/CIR-56/00 dated December 15, 2000",
+    "circular_date": "December 15, 2000",
+    "subject": "Use of Digital Signature on Contract Notes",
+    "status": null
+  },
+  {
+    "s_no": 13,
+    "circular_no": "SMDRP/POLICY/CIR-39/2001 dated July 18, 2001.",
+    "circular_date": "July 18, 2001",
+    "subject": "Unique Client Code.",
+    "status": null
+  },
+  {
+    "s_no": 14,
+    "circular_no": "SMD/POLICY/CIR-49/2001 dated October 22, 2001.",
+    "circular_date": "October 22, 2001",
+    "subject": "Advertisement by Brokers/ Sub-Brokers and grant of trading terminals.",
+    "status": null
+  },
+  {
+    "s_no": 15,
+    "circular_no": "SMD/DBA-II/CIR-22/2002 dated September 12, 2002.",
+    "circular_date": "September 12, 2002",
+    "subject": "Additional requirements for processing applications of Stock Brokers for Registration/ Prior approval for sale of membership/ Change of name/ trade",
+    "status": null
+  },
+  {
+    "s_no": 16,
+    "circular_no": "SEBI/SMD/SE/15/2003/29/04 dated April 29, 2003",
+    "circular_date": "April 29, 2003",
+    "subject": "Issuance of Contract Notes in electronic form",
+    "status": null
+  },
+  {
+    "s_no": 17,
+    "circular_no": "SMD/DBA-II/Cir-16/9618/03 dated May 05, 2003.",
+    "circular_date": "May 05, 2003",
+    "subject": "SEBI Registration Number of Brokers / Sub-Brokers to be quoted on all correspondences with SEBI.",
+    "status": null
+  },
+  {
+    "s_no": 18,
+    "circular_no": "SEBI/MIRSD/CIR-06/2004 January 13, 2004.",
+    "circular_date": null,
+    "subject": "Review of norms relating to trading by Members/Sub-Brokers.",
+    "status": null
+  },
+  {
+    "s_no": 19,
+    "circular_no": "MIRSD/DR-1/CIR-16/09 dated November 06, 2009.",
+    "circular_date": "November 06, 2009",
+    "subject": "Market Access through Authorised Persons.",
+    "status": null
+  },
+  {
+    "s_no": 20,
+    "circular_no": "MIRSD/SE/CIR-19/2009 dated December 03, 2009.",
+    "circular_date": "December 03, 2009",
+    "subject": "Dealings between a client and a stock broker (trading members included).",
+    "status": null
+  },
+  {
+    "s_no": 21,
+    "circular_no": "SEBI/MIRSD/MASTER CIR-04/2010 dated March 17, 2010.",
+    "circular_date": "March 17, 2010",
+    "subject": "Master Circular on Oversight of Members (Stock Brokers/Trading Members/Clearing Members of any Segment of Stock Exchanges and Clearing Corporations).",
+    "status": null
+  },
+  {
+    "s_no": 22,
+    "circular_no": "SEBI/CIR/MIRSD/AP/8/2010 dated July 23, 2010.",
+    "circular_date": "July 23, 2010",
+    "subject": "Market Access through Authorised Persons.",
+    "status": null
+  },
+  {
+    "s_no": 23,
+    "circular_no": "CIR/MIRSD/9/2010 dated November 04, 2010.",
+    "circular_date": "November 04, 2010",
+    "subject": "Display of Details by Stock Brokers (including Trading Members).",
+    "status": null
+  },
+  {
+    "s_no": 24,
+    "circular_no": "SEBI/MIRSD/CIR/01/2011 dated May 13, 2011.",
+    "circular_date": "May 13, 2011",
+    "subject": "Clarification on circular dated December 3, 2009 on ‘Dealings between a Client and a Stock broker.",
+    "status": null
+  },
+  {
+    "s_no": 25,
+    "circular_no": "CIR/MIRSD/2/2011 dated June 03, 2011.",
+    "circular_date": "June 03, 2011",
+    "subject": "Periodical Report – Grant of prior approval to members of Stock Exchanges/Sub-Brokers.",
+    "status": null
+  },
+  {
+    "s_no": 26,
+    "circular_no": "CIR/MIRSD/03/2011 dated June 09, 2011.",
+    "circular_date": "June 09, 2011",
+    "subject": "Pre- funded instruments / electronic fund transfers.",
+    "status": null
+  },
+  {
+    "s_no": 27,
+    "circular_no": "CIR/MIRSD/12/2011 dated July 11, 2011.",
+    "circular_date": "July 11, 2011",
+    "subject": "Clarification regarding admission of Limited Liability Partnerships as Members of Stock Exchanges.",
+    "status": null
+  },
+  {
+    "s_no": 28,
+    "circular_no": "CIR/MIRSD/15/2011 dated August 02, 2011.",
+    "circular_date": "August 02, 2011",
+    "subject": "SMS and E-mail alerts to investors by Stock Exchanges.",
+    "status": null
+  },
+  {
+    "s_no": 29,
+    "circular_no": "CIR/MIRSD/16/2011 dated August 22, 2011",
+    "circular_date": "August 22, 2011",
+    "subject": "Simplification and Rationalization of Trading Account Opening Process",
+    "status": null
+  },
+  {
+    "s_no": 30,
+    "circular_no": "CIR/MIRSD/18/2011 dated August 25, 2011.",
+    "circular_date": "August 25, 2011",
+    "subject": "Redressal of investor grievances against Stock Brokers and Sub-Brokers in SEBI Complaints Redress System (SCORES).",
+    "status": null
+  },
+  {
+    "s_no": 31,
+    "circular_no": "MIRSD/SE/CIR-21/2011 dated October 05,2011.",
+    "circular_date": "October 05,2011",
+    "subject": "Uniform Know Your Client (KYC) requirements for the securities market",
+    "status": null
+  },
+  {
+    "s_no": 32,
+    "circular_no": "CIR/MIRSD/24/2011 dated December 15, 2011",
+    "circular_date": "December 15, 2011",
+    "subject": "Guidelines on Outsourcing of Activities by Intermediaries",
+    "status": null
+  },
+  {
+    "s_no": 33,
+    "circular_no": "CIR/MIRSD/13/2012 dated December 07, 2012.",
+    "circular_date": "December 07, 2012",
+    "subject": "Oversight of Members (Stock Brokers/Trading Members/Clearing Members of any segment of Stock Exchanges/Clearing Corporations).",
+    "status": null
+  },
+  {
+    "s_no": 34,
+    "circular_no": "CIR/MIRSD/5/2013 dated August 27, 2013.",
+    "circular_date": "August 27, 2013",
+    "subject": "General Guidelines for dealing with Conflicts of Interest of Intermediaries, Recognised Stock Exchanges, Recognised Clearing Corporations, Depositories and their Associated Persons in Securities Market.",
+    "status": null
+  },
+  {
+    "s_no": 35,
+    "circular_no": "CIR/MIRSD/13/2013 dated December 26, 2013",
+    "circular_date": "December 26, 2013",
+    "subject": "Know Your Client Requirements",
+    "status": null
+  },
+  {
+    "s_no": 36,
+    "circular_no": "CIR/MIRSD/2/2014 dated June 30, 2014.",
+    "circular_date": "June 30, 2014",
+    "subject": "Inter-Governmental Agreement with United States of America under Foreign Accounts Tax Compliance Act – Registration.",
+    "status": null
+  },
+  {
+    "s_no": 37,
+    "circular_no": "CIR/MIRSD/3/2014 dated August 28, 2014.",
+    "circular_date": "August 28, 2014",
+    "subject": "Information regarding Grievance Redressal Mechanism.",
+    "status": null
+  },
+  {
+    "s_no": 38,
+    "circular_no": "CIR/MIRSD/4/2014 dated October 13, 2014.",
+    "circular_date": "October 13, 2014",
+    "subject": "Single registration for Stock Brokers & Clearing Members.",
+    "status": null
+  },
+  {
+    "s_no": 39,
+    "circular_no": "CIR/MIRSD/2/2015 dated August 26, 2015.",
+    "circular_date": "August 26, 2015",
+    "subject": "Implementation of the Multilateral Competent Authority Agreement and Foreign Account Tax Compliance Act.",
+    "status": null
+  },
+  {
+    "s_no": 40,
+    "circular_no": "CIR/MIRSD/3/2015 dated September 10, 2015.",
+    "circular_date": "September 10, 2015",
+    "subject": "Reporting Requirement under Foreign Account Tax Compliance Act (FATCA) and Common Reporting Standards (CRS) – Guidance Note.",
+    "status": null
+  },
+  {
+    "s_no": 41,
+    "circular_no": "CIR/MIRSD/4/2015 dated September 29, 2015.",
+    "circular_date": "September 29, 2015",
+    "subject": "Registration of Members of Commodity Derivatives Exchanges.",
+    "status": null
+  },
+  {
+    "s_no": 42,
+    "circular_no": "CIR/MIRSD/64/2016 dated July 12, 2016",
+    "circular_date": "July 12, 2016",
+    "subject": "Simplification of Account Opening Kit",
+    "status": null
+  },
+  {
+    "s_no": 43,
+    "circular_no": "CIR/MIRSD/66/2016 dated July 21, 2016",
+    "circular_date": "July 21, 2016",
+    "subject": "Operationalisation of Central KYC Records Registry (CKYCR)",
+    "status": null
+  },
+  {
+    "s_no": 44,
+    "circular_no": "SEBI/HO/MIRSD/MIRSD2/CIR/P/20 16/92 dated September 23, 2016.",
+    "circular_date": "September 23, 2016",
+    "subject": "Regulatory Framework for Commodity Derivatives Brokers.",
+    "status": null
+  },
+  {
+    "s_no": 45,
+    "circular_no": "SEBI/HO/MIRSD/MIRSD2/CIR/P/20 16/95 dated September 26, 2016.",
+    "circular_date": "September 26, 2016",
+    "subject": "Enhanced Supervision of Stock Brokers/Depository Participants.",
+    "status": null
+  },
+  {
+    "s_no": 46,
+    "circular_no": "SEBI/HO/MIRSD/MIRSD6/CIR/P/20 17/20 dated March 10, 2017.",
+    "circular_date": "March 10, 2017",
+    "subject": "Redressal of complaints against Stock Brokers and Depository Participants in SEBI Complaints Redress System (SCORES).",
+    "status": null
+  },
+  {
+    "s_no": 47,
+    "circular_no": "SEBI/HO/MIRSD/MIRSD1/CIR/P/20 17/38 dated May 02, 2017.",
+    "circular_date": "May 02, 2017",
+    "subject": "Online Registration Mechanism for Securities Market Intermediaries.",
+    "status": null
+  },
+  {
+    "s_no": 48,
+    "circular_no": "CIR/HO/MIRSD/MIRSD2/CIR/P/201 7/64 dated June 22, 2017.",
+    "circular_date": "June 22, 2017",
+    "subject": "Clarification to Enhanced Supervision Circular.",
+    "status": null
+  },
+  {
+    "s_no": 49,
+    "circular_no": "CIR/HO/MIRSD/MIRSD2/CIR/P/201 7/73 dated June 30, 2017.",
+    "circular_date": "June 30, 2017",
+    "subject": "Policy of Annual Inspection of Members by Stock Exchanges/Clearing Corporations.",
+    "status": null
+  },
+  {
+    "s_no": 50,
+    "circular_no": "SEBI/HO/MIRSD/MIRSD1/CIR/P/20 17/104 dated September 21, 2017.",
+    "circular_date": "September 21, 2017",
+    "subject": "Integration of broking activities in Equity Markets and Commodity Derivatives Markets under single entity.",
+    "status": null
+  },
+  {
+    "s_no": 51,
+    "circular_no": "CIR/HO/MIRSD/MIRSD2/CIR/PB/20 17/107 dated September 25, 2017.",
+    "circular_date": "September 25, 2017",
+    "subject": "Clarification to Enhanced Supervision Circular.",
+    "status": null
+  },
+  {
+    "s_no": 52,
+    "circular_no": "SEBI/HO/MIRSD/MIRSD2/CIR/P/20 17/123 dated November 29, 2017.",
+    "circular_date": "November 29, 2017",
+    "subject": "Modification to Enhanced Supervision Circular.",
+    "status": null
+  },
+  {
+    "s_no": 53,
+    "circular_no": "SEBI/HO/MIRSD/DOP1/CIR/P/2018 /54 dated March 22, 2018.",
+    "circular_date": "March 22, 2018",
+    "subject": "Circular on Prevention of Unauthorised Trading by Stock Brokers.",
+    "status": null
+  },
+  {
+    "s_no": 54,
+    "circular_no": "SEBI/HO/MIRSD/DOP/CIR/P/2018/ 113 dated July 12, 2018",
+    "circular_date": "July 12, 2018",
+    "subject": "Discontinuation of acceptance of cash by Stock Brokers",
+    "status": null
+  },
+  {
+    "s_no": 55,
+    "circular_no": "SEBI/HO/MIRSD/CIR/PB/2018/147 dated December 03, 2018",
+    "circular_date": "December 03, 2018",
+    "subject": "Cyber Security & Cyber Resilience framework for Stock Brokers / Depository Participants",
+    "status": null
+  },
+  {
+    "s_no": 56,
+    "circular_no": "SEBI/HO/MIRSD/DOP/CIR/P/2018/ 153 dated December 17, 2018",
+    "circular_date": "December 17, 2018",
+    "subject": "Early Warning Mechanism to prevent diversion of client securities",
+    "status": null
+  },
+  {
+    "s_no": 57,
+    "circular_no": "SEBI/HO/MIRSD/DOS2/CIR/P/2019 /10 dated January 04, 2019",
+    "circular_date": "January 04, 2019",
+    "subject": "Reporting for Artificial Intelligence (AI) and Machine Learning (ML) applications and systems offered and used by market intermediaries",
+    "status": null
+  },
+  {
+    "s_no": 58,
+    "circular_no": "SEBI/HO/MIRSD/DOP/CIR/P/2019/ 14 dated January 11, 2019",
+    "circular_date": "January 11, 2019",
+    "subject": "Uniform membership structure across segments",
+    "status": null
+  },
+  {
+    "s_no": 59,
+    "circular_no": "CIR/HO/MIRSD/DOS2/CIR/PB/2019 /038 dated March 15, 2019",
+    "circular_date": "March 15, 2019",
+    "subject": "Clarification to Cyber Security & Cyber Resilience framework for Stock Brokers / Depository Participants",
+    "status": null
+  },
+  {
+    "s_no": 60,
+    "circular_no": "CIR/HO/MIRSD/DOP/CIR/P/2019/7 5 dated June 20, 2019",
+    "circular_date": "June 20, 2019",
+    "subject": "Handling of Clients’ Securities by Trading Members/Clearing Members",
+    "status": null
+  },
+  {
+    "s_no": 61,
+    "circular_no": "SEBI/HO/MIRSD/DOP/CIR/P/2019/ 109 dated October 15, 2019",
+    "circular_date": "October 15, 2019",
+    "subject": "Cyber Security & Cyber Resilience framework for Stock Brokers / Depository Participants-Clarifications",
+    "status": null
+  },
+  {
+    "s_no": 62,
+    "circular_no": "SEBI/HO/MIRSD/DOP/CIR/P/2019/ 136 dated November 15, 2019",
+    "circular_date": "November 15, 2019",
+    "subject": "Mapping of Unique Client Code (UCC) with demat account of the clients",
+    "status": null
+  },
+  {
+    "s_no": 63,
+    "circular_no": "CIR/HO/MIRSD/DOP/CIR/P/2019/1 39 dated November 19, 2019",
+    "circular_date": "November 19, 2019",
+    "subject": "Collection and reporting of margins by Trading Member(TM) /Clearing Member(CM) in Cash Segment",
+    "status": null
+  },
+  {
+    "s_no": 64,
+    "circular_no": "SEBI/HO/MIRSD/DOP/CIR/P/2020/ 28 dated February 25, 2020",
+    "circular_date": "February 25, 2020",
+    "subject": "Margin obligations to be given by way of Pledge/ Re-pledge in the Depository System",
+    "status": null
+  },
+  {
+    "s_no": 65,
+    "circular_no": "SEBI/HO/MIRSD/DOP/CIR/P/2020/ 88 dated May 25, 2020",
+    "circular_date": "May 25, 2020",
+    "subject": "Implementation of Circular on ‘Margin obligations to be given by way of Pledge / Re-pledge in the Depository System’ - Extension",
+    "status": null
+  },
+  {
+    "s_no": 66,
+    "circular_no": "SEBI/HO/MIRSD/DPIEA/CIR/P/202 0/115 dated July 01, 2020",
+    "circular_date": "July 01, 2020",
+    "subject": "Standard Operating Procedure in the cases of Trading Member / Clearing Member leading to default",
+    "status": null
+  },
+  {
+    "s_no": 67,
+    "circular_no": "SEBI/HO/MIRSD/DOP/CIR/P/2020/ 146 dated July 31, 2020",
+    "circular_date": "July 31, 2020",
+    "subject": "Collection and Reporting of Margins by Trading Member (TM) / Clearing Member (CM) in Cash Segment",
+    "status": null
+  },
+  {
+    "s_no": 68,
+    "circular_no": "SEBI/HO/MIRSD/DOP/CIR/P/2020/ 158 dated August 27, 2020",
+    "circular_date": "August 27, 2020",
+    "subject": "Execution of Power of Attorney (PoA) by the Client in favour of the Stock Broker / Stock Broker and Depository Participant",
+    "status": null
+  },
+  {
+    "s_no": 69,
+    "circular_no": "SEBI/HO/MIRSD/DOP/CIR/P/2020/ 173 dated September 15, 2020",
+    "circular_date": "September 15, 2020",
+    "subject": "Collection and Reporting of Margins by Trading Member (TM) / Clearing Member (CM) in Cash Segment - Clarification",
+    "status": null
+  },
+  {
+    "s_no": 70,
+    "circular_no": "SEBI/HO/MIRSD/DPIEA/CIR/P/202 0/186 dated September 28, 2020",
+    "circular_date": "September 28, 2020",
+    "subject": "Recovery of assets of defaulter member and recovery of funds from debit balance clients of defaulter member for meeting the obligations of clients / Stock Exchange / Clearing Corporation",
+    "status": null
+  },
+  {
+    "s_no": 71,
+    "circular_no": "SEBI/HO/MIRSD2/DOR/CIR/P/2020 /221 dated November 03, 2020",
+    "circular_date": "November 03, 2020",
+    "subject": "Advisory for Financial Sector Organizations regarding Software as a Service (SaaS) based solutions",
+    "status": null
+  },
+  {
+    "s_no": 72,
+    "circular_no": "SEBI/HO/MIRSD/DOC/CIR/P/2020/ 226 dated November 06, 2020",
+    "circular_date": "November 06, 2020",
+    "subject": "Investor Grievance Redressal Mechanism",
+    "status": null
+  },
+  {
+    "s_no": 73,
+    "circular_no": "SEBI/HO/MIRSD/DOP/CIR/P/2021/ 31 dated March 10, 2021",
+    "circular_date": "March 10, 2021",
+    "subject": "Rollout of Legal Entity Template",
+    "status": null
+  },
+  {
+    "s_no": 74,
+    "circular_no": "SEBI/HO/MIRSD/DOR/CIR/P/2021/ 42 dated March 25, 2021",
+    "circular_date": "March 25, 2021",
+    "subject": "Prior Approval for Change in control: Transfer of shareholdings among immediate relatives and transmission of shareholdings and their effect on change in control",
+    "status": null
+  },
+  {
+    "s_no": 75,
+    "circular_no": "SEBI/HO/MIRSD/DOR/CIR/P/2021/ 46 dated March 26, 2021",
+    "circular_date": "March 26, 2021",
+    "subject": "Transfer of business by SEBI registered intermediaries to other legal entity",
+    "status": null
+  },
+  {
+    "s_no": 76,
+    "circular_no": "SEBI/HO/MIRSD/DOP/P/CIR/2021/ 577 dated June 16, 2021",
+    "circular_date": "June 16, 2021",
+    "subject": "Settlement of Running Account of Client’s Funds lying with Trading Member (TM)",
+    "status": null
+  },
+  {
+    "s_no": 77,
+    "circular_no": "SEBI/HO/MIRSD/DOP/P/CIR/2021/ 595 dated July 16, 2021",
+    "circular_date": "July 16, 2021",
+    "subject": "Block Mechanism in demat account of clients undertaking sale transactions",
+    "status": null
+  },
+  {
+    "s_no": 78,
+    "circular_no": "SEBI/HO/MIRSD/DOP/CIR/P/2021/ 653 dated October 28, 2021",
+    "circular_date": "October 28, 2021",
+    "subject": "Maintenance of current accounts in multiple banks by Stock Brokers",
+    "status": null
+  },
+  {
+    "s_no": 79,
+    "circular_no": "SEBI/HO/MIRSD/MIRSD_IT/P/CIR/ 2021/0000000658 dated November 16, 2021",
+    "circular_date": "November 16, 2021",
+    "subject": "Framework for Regulatory Sandbox",
+    "status": null
+  },
+  {
+    "s_no": 80,
+    "circular_no": "SEBI/HO/MIRSD/DOP/CIR/P/2021/ 676 dated December 02, 2021",
+    "circular_date": "December 02, 2021",
+    "subject": "Publishing Investor Charter and disclosure of Investor Complaints by Stock Brokers on their websites",
+    "status": null
+  },
+  {
+    "s_no": 81,
+    "circular_no": "SEBI/HO/MIRSD/DoP/P/CIR/2022/4 4 dated April 04, 2022",
+    "circular_date": "April 04, 2022",
+    "subject": "Execution of ‘Demat Debit and Pledge Instruction’ (DDPI) for transfer of securities towards deliveries / settlement obligations and pledging / re-pledging of securities",
+    "status": null
+  },
+  {
+    "s_no": 82,
+    "circular_no": "SEBI/HO/MIRSD/DoR/P/CIR/2022/6 1 dated May 13, 2022",
+    "circular_date": "May 13, 2022",
+    "subject": "Guidelines for seeking NOC by Stock Brokers / Clearing Members for setting up Wholly Owned Subsidiaries, Step Down Subsidiaries, Joint Ventures in GIFT IFSC",
+    "status": null
+  },
+  {
+    "s_no": 83,
+    "circular_no": "SEBI/HO/MIRSD/DPIEA/CIR/P/202 2/72 dated May 27, 2022",
+    "circular_date": "May 27, 2022",
+    "subject": "Modification to Standard Operating Procedure in the cases of Trading Member / Clearing Member leading to default",
+    "status": null
+  },
+  {
+    "s_no": 84,
+    "circular_no": "SEBI/HO/MIRSD/DOS3/P/CIR/2022 /78 dated June 03, 2022",
+    "circular_date": "June 03, 2022",
+    "subject": "Investor Redressal Grievance Mechanism",
+    "status": null
+  },
+  {
+    "s_no": 85,
+    "circular_no": "SEBI/HO/MIRSD/TPD/P/CIR/2022/8 0 dated June 07, 2022",
+    "circular_date": "June 07, 2022",
+    "subject": "Modification in Cyber Security and Cyber resilience framework for Stock Brokers /",
+    "status": null
+  },
+  {
+    "s_no": 86,
+    "circular_no": "SEBI/HO/MIRSD/ MIRSD_DPIEA/P/CIR/2022/83 dated June 20, 2022",
+    "circular_date": "June 20, 2022",
+    "subject": "Naming / Tagging of demat accounts maintained by Stock Brokers",
+    "status": null
+  },
+  {
+    "s_no": 87,
+    "circular_no": "SEBI/HO/MIRSD/TPD/P/CIR/2022/9 3 dated June 30, 2022",
+    "circular_date": "June 30, 2022",
+    "subject": "Modification in Cyber Security and Cyber resilience framework for Stock Brokers / Depository Participants",
+    "status": null
+  },
+  {
+    "s_no": 88,
+    "circular_no": "SEBI/HO/MIRSD/DoP/P/CIR/2022/1 01 dated July 27, 2022",
+    "circular_date": "July 27, 2022",
+    "subject": "Settlement of Running Account of Client’s Funds lying with Trading Member (TM)",
+    "status": null
+  },
+  {
+    "s_no": 89,
+    "circular_no": "SEBI/HO/MIRSD/DoP/P/CIR/2022/1 09 dated August 18, 2022",
+    "circular_date": "August 18, 2022",
+    "subject": "Block Mechanism in demat account of clients undertaking sale transactions",
+    "status": null
+  },
+  {
+    "s_no": 90,
+    "circular_no": "SEBI/HO/MIRSD/DOP/P/CIR/2022/ 117 dated September 02, 2022",
+    "circular_date": "September 02, 2022",
+    "subject": "Performance/return claimed by unregulated platforms offering algorithmic strategies for trading",
+    "status": null
+  },
+  {
+    "s_no": 91,
+    "circular_no": "SEBI/HO/MIRSD/DoP/P/CIR/2022/1 19 dated September 19, 2022",
+    "circular_date": "September 19, 2022",
+    "subject": "Validation of Instructions for Pay-In of Securities from Client demat account to Trading Member (TM) Pool Account against obligations received from the Clearing Corporations",
+    "status": null
+  },
+  {
+    "s_no": 92,
+    "circular_no": "SEBI/HO/MIRSD/MIRSD-PoD- 1/P/CIR/2022/137 dated October 06, 2022",
+    "circular_date": "October 06, 2022",
+    "subject": "Execution of ‘Demat Debit and Pledge Instruction’ (DDPI) for transfer of securities towards deliveries / settlement obligations and pledging / re-pledging of securities-Clarification",
+    "status": null
+  },
+  {
+    "s_no": 93,
+    "circular_no": "SEBI/HO/MIRSD/DOP/P/CIR/2022/ 143 dated October 27, 2022",
+    "circular_date": "October 27, 2022",
+    "subject": "Block Mechanism in demat account of clients undertaking sale transactions-Clarification",
+    "status": null
+  },
+  {
+    "s_no": 94,
+    "circular_no": "SEBI/HO/MIRSD/MIRSD-PoD- 1/P/CIR/2022/153 dated November 11, 2022",
+    "circular_date": "November 11, 2022",
+    "subject": "Handling of Clients’ Securities by Trading Members (TM)/ Clearing Members (CM)",
+    "status": null
+  },
+  {
+    "s_no": 95,
+    "circular_no": "SEBI/HO/MIRSD/DoP/P/CIR/2022/1 62 dated November 25, 2022",
+    "circular_date": "November 25, 2022",
+    "subject": "Extension of timelines for implementation of SEBI circulars SEBI/HO/MIRSD/MIRSD-PoD- 1/P/CIR/2022/137 and SEBI/HO/MIRSD/DoP/P/CIR/2022/119",
+    "status": null
+  },
+  {
+    "s_no": 96,
+    "circular_no": "SEBI/HO/MIRSD/TPD- 1/P/CIR/2022/160 dated November 25, 2022",
+    "circular_date": "November 25, 2022",
+    "subject": "Framework to address the ‘technical glitches’ in Stock Brokers’ Electronic Trading Systems",
+    "status": null
+  },
+  {
+    "s_no": 97,
+    "circular_no": "SEBI/HO/MIRSD/MIRSD-PoD- 2/P/CIR/2022/163 dated November 28, 2022",
+    "circular_date": "November 28, 2022",
+    "subject": "Procedure for seeking prior approval for change in control",
+    "status": null
+  },
+  {
+    "s_no": 98,
+    "circular_no": "SEBI/HO/MIRSD/MIRSD-PoD- 1/P/CIR/2022/177 dated December 30, 2022",
+    "circular_date": "December 30, 2022",
+    "subject": "Introduction of Investor Risk Reduction Access (IRRA) platform in case of disruption of trading services provided by the Trading Member (TM)",
+    "status": null
+  },
+  {
+    "s_no": 99,
+    "circular_no": "SEBI/HO/MIRSD/MIRSD-PoD- 1/P/CIR/2023/24 dated February 06,2023",
+    "circular_date": "February 06,2023",
+    "subject": "Enhanced obligations and responsibilities on Qualified Stock Brokers (QSBs)",
+    "status": null
+  },
+  {
+    "s_no": 100,
+    "circular_no": "S EBI/HO/MIRSD/MIRSD-PoD- 1/P/CIR/2023/30 dated February 15, 2023",
+    "circular_date": "February 15, 2023",
+    "subject": "Maintenance of a website by stock brokers and depository participants",
+    "status": null
+  },
+  {
+    "s_no": 101,
+    "circular_no": "S EBI/HO/MIRSD/MIRSD-PoD- 1/P/CIR/2023/42 dated March 27, 2023",
+    "circular_date": "March 27, 2023",
+    "subject": "Nomination for Eligible Trading and Demat Accounts –Extension of timelines for existing account holders",
+    "status": null
+  },
+  {
+    "s_no": 102,
+    "circular_no": "S EBI letter dated June 24, 2008",
+    "circular_date": "June 24, 2008",
+    "subject": "SEBI letter number MRD/DoP/NSE/129791/2008",
+    "status": null
+  },
+  {
+    "s_no": 103,
+    "circular_no": "S EBI letter dated March 31, 2015",
+    "circular_date": "March 31, 2015",
+    "subject": "SEBI letter number MRD/DMS/OW/9500/2015",
+    "status": null
+  },
+  {
+    "s_no": 104,
+    "circular_no": "E mail dated April 13, 2022",
+    "circular_date": "April 13, 2022",
+    "subject": "Issuance of Electronic Contract Notes (ECN) through SMS/electronic instant messaging services",
+    "status": null
+  },
+  {
+    "s_no": 105,
+    "circular_no": "S EBI/HO/MIRSD/MIRSD-PoD- 1/P/CIR/2023/061 dated April 25, 2023",
+    "circular_date": "April 25, 2023",
+    "subject": "Bank Guarantees (BGs) created out of clients’ funds",
+    "status": null
+  },
+  {
+    "s_no": 106,
+    "circular_no": "S EBI/HO/MIRSD/MIRSD-PoD- 1/P/CIR/2023/73 dated May 19, 2023",
+    "circular_date": "May 19, 2023",
+    "subject": "Risk disclosure with respect to trading by individual traders in Equity Futures & Options Segment",
+    "status": null
+  },
+  {
+    "s_no": 107,
+    "circular_no": "S EBI/HO/MIRSD/MIRSD-PoD- 1/P/CIR/2023/83 dated June 02, 2023",
+    "circular_date": "June 02, 2023",
+    "subject": "Transactions in Corporate Bonds through Request for Quote (RFQ) platform by Stock Brokers(SBs).",
+    "status": null
+  },
+  {
+    "s_no": 108,
+    "circular_no": "S EBI/HO/MIRSD/MIRSD-PoD- 1/P/CIR/2023/95 dated June 21, 2023",
+    "circular_date": "June 21, 2023",
+    "subject": "Trading Preferences by Clients",
+    "status": null
+  },
+  {
+    "s_no": 109,
+    "circular_no": "S EBI/HO/MIRSD/MIRSD-PoD- 1/P/CIR/2023/132 dated August 01, 2023",
+    "circular_date": "August 01, 2023",
+    "subject": "Trading Preferences by Clients – Applicability for commodity derivatives",
+    "status": null
+  },
+  {
+    "s_no": 110,
+    "circular_no": "S EBI/HO/MIRSD/POD-",
+    "circular_date": null,
+    "subject": "Extension of timelines (i) for nomination",
+    "status": null
+  },
+  {
+    "s_no": null,
+    "circular_no": "1/P/CIR/2023/158 dated September 26, 2023",
+    "circular_date": "September 26, 2023",
+    "subject": "in eligible demat accounts and (ii) for submission of PAN, Nomination and KYC details by physical security holders; and voluntary nomination for trading accounts",
+    "status": null
+  },
+  {
+    "s_no": 111,
+    "circular_no": "S EBI/HO/MIRSD/MIRSD-PoD- 1/P/CIR/2023/180 dated November 13, 2023",
+    "circular_date": "November 13, 2023",
+    "subject": "Most Important Terms and Conditions (MITC)",
+    "status": null
+  },
+  {
+    "s_no": 112,
+    "circular_no": "S EBI/HO/MIRSD/MIRSD-PoD- 1/P/CIR/2023/187 dated December 12, 2023",
+    "circular_date": "December 12, 2023",
+    "subject": "Upstreaming of clients’ funds by Stock Brokers (SBs) / Clearing Members (CMs) to Clearing Corporations (CCs)",
+    "status": null
+  },
+  {
+    "s_no": 113,
+    "circular_no": "S EBI/HO/MIRSD/MIRSD- PoD1/P/CIR/2023/197 dated December 28, 2023",
+    "circular_date": "December 28, 2023",
+    "subject": "Settlement of Running Account of Client’s Funds lying with Trading Member (TM)",
+    "status": null
+  },
+  {
+    "s_no": 114,
+    "circular_no": "S EBI/HO/MIRSD/MIRSD-PoD- 1/P/CIR/2024/03 dated January 12, 2024",
+    "circular_date": "January 12, 2024",
+    "subject": "Ease of doing business-Changes in reporting",
+    "status": null
+  },
+  {
+    "s_no": 115,
+    "circular_no": "S EBI/HO/MIRSD/POD- 1/P/CIR/2024/4 dated January 12, 2024",
+    "circular_date": "January 12, 2024",
+    "subject": "Ease of Doing Investments by Investors- Facility of voluntary freezing/ blocking of Trading Accounts by Clients",
+    "status": null
+  },
+  {
+    "s_no": 116,
+    "circular_no": "S EBI/HO/MIRSD/MIRSD-PoD- 1/P/CIR/2024/14 dated March 11, 2024",
+    "circular_date": "March 11, 2024",
+    "subject": "Measures to instill trust in securities market – Expanding the framework of Qualified Stock Brokers (QSBs) to more stock brokers",
+    "status": null
+  },
+  {
+    "s_no": 117,
+    "circular_no": "S EBI/HO/MIRSD/MIRSD- PoD1/P/CIR/2024/75 dated June 05, 2024",
+    "circular_date": "June 05, 2024",
+    "subject": "Enhancement of operational efficiency and Risk reduction – Pay-out of securities directly to client demat account",
+    "status": null
+  },
+  {
+    "s_no": 118,
+    "circular_no": "S EBI/HO/MIRSD/MIRSD-PoD- 1/P/CIR/2024/96 dated July 04, 2024",
+    "circular_date": "July 04, 2024",
+    "subject": "Measures to instil confidence in securities market – Brokers’ institutional mechanism for prevention and detection of fraud or market abuse",
+    "status": null
+  },
+  {
+    "s_no": null,
+    "circular_no": "Changes",
+    "circular_date": null,
+    "subject": "Page and para number",
+    "status": null
+  },
+  {
+    "s_no": 1,
+    "circular_no": "SEBI/HO/MIRSD/MIRSD-PoD1/P/CIR/2024/75 on ‘Enhancement of operational efficiency and Risk reduction – Pay-out of securities directly to client demat account’ dated June 05, 2024",
+    "circular_date": "June 05, 2024",
+    "subject": "Para 50 at page no. 126 Para 41.9 at page no. 99",
+    "status": null
+  },
+  {
+    "s_no": 2,
+    "circular_no": "SEBI/HO/MIRSD/MIRSD-PoD-1/P/CIR/2024/96 on ‘Measures to instil confidence in securities market – Brokers’ institutional mechanism for prevention and detection of fraud or market abuse’ dated July 04, 2024",
+    "circular_date": "July 04, 2024",
+    "subject": "Para 94 at Page no. 234",
+    "status": null
+  },
+  {
+    "s_no": 3,
+    "circular_no": "Para 51.3.6 wherein option has been given to broker to send contract note either in physical mode or through electronic instant messaging services in case ECN has not been delivered to the client or has been rejected by email id of client",
+    "circular_date": null,
+    "subject": "Para 51.3.6 at page no. 129 Accordingly para 50.3.8 of Master Circular for stock brokers dated May 22, 2024 stands deleted Point no. 37.2 of Annexure 9 ‘Rights and Obligation of Stock brokers and clients’ at page no. 282",
+    "status": null
+  },
+  {
+    "s_no": 4,
+    "circular_no": "SEBI/HO/MIRSD/MIRSD-PoD1/P/CIR/2024/95 on “Modification to Enhanced Supervision of Stock brokers and Depository Participants’ dated July 04, 2024",
+    "circular_date": "July 04, 2024",
+    "subject": "Para 15.8.1.1.c at page no. 34 and Para 15.8.1.2.a at page no. 35",
+    "status": null
+  },
+  {
+    "s_no": 5,
+    "circular_no": "Provisions related to conciliation proceedings have been incorporated.",
+    "circular_date": null,
+    "subject": "Point no. 22, 23 and 37.6 of Annexure 9 ‘Rights and Obligation of Stock brokers and clients’ at page no. 282",
+    "status": null
+  },
+  {
+    "s_no": 6,
+    "circular_no": "There was typo error, wherein erroneously demat account under ‘5’ categories was mentioned despite total 6 categories of demat accounts being given in the table.",
+    "circular_date": null,
+    "subject": "Para 15.3.2.4 at page no. 25",
+    "status": null
+  },
+  {
+    "s_no": 7,
+    "circular_no": "Smart Order Routing wherein Client Broker agreement has been replaced with ‘Rights and Obligation of Stock brokers and clients’",
+    "circular_date": null,
+    "subject": "Para 57.2.8 at page no. 152",
+    "status": null
+  }
+]

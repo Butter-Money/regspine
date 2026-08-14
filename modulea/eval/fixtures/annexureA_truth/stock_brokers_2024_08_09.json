@@ -1,0 +1,66 @@
+[
+  {
+    "s_no": 1,
+    "description": "SEBI/HO/MIRSD/MIRSD-PoD1/P/CIR/2024/75 on ‘Enhancement of operational efficiency and Risk reduction – Pay-out of securities directly to client demat account’ dated June 05, 2024",
+    "page_para_ref": "Para 50 at page no. 126 Para 41.9 at page no. 99",
+    "source_circular_no": "SEBI/HO/MIRSD/MIRSD-PoD1/P/CIR/2024/75",
+    "referenced_pages": [
+      99,
+      126
+    ],
+    "referenced_paras": [
+      "41.9",
+      "50"
+    ]
+  },
+  {
+    "s_no": 2,
+    "description": "SEBI/HO/MIRSD/MIRSD-PoD-1/P/CIR/2024/96 on ‘Measures to instil confidence in securities market – Brokers’ institutional mechanism for prevention and detection of fraud or market abuse’ dated July 04, 2024",
+    "page_para_ref": "Para 94 at Page no. 234",
+    "source_circular_no": "SEBI/HO/MIRSD/MIRSD-PoD-1/P/CIR/2024/96",
+    "referenced_pages": [
+      234
+    ],
+    "referenced_paras": [
+      "94"
+    ]
+  },
+  {
+    "s_no": 3,
+    "description": "Para 51.3.6 wherein option has been given to broker to send contract note either in physical mode or through electronic instant messaging services in case ECN has not been delivered to the client or has been rejected by email id of client",
+    "page_para_ref": "Para 51.3.6 at page no. 129 Accordingly para 50.3.8 of Master Circular for stock brokers dated May 22, 2024 stands deleted Point no. 37.2 of Annexure 9 ‘Rights and Obligation of Stock brokers and clients’ at page no. 282",
+    "source_circular_no": null,
+    "referenced_pages": [
+      129,
+      282
+    ],
+    "referenced_paras": [
+      "50.3.8",
+      "51.3.6"
+    ]
+  },
+  {
+    "s_no": 4,
+    "description": "SEBI/HO/MIRSD/MIRSD-PoD1/P/CIR/2024/95 on “Modification to Enhanced Supervision of Stock brokers and Depository Participants’ dated July 04, 2024",
+    "page_para_ref": "Para 15.8.1.1.c at page no. 34 and Para 15.8.1.2.a at page no. 35",
+    "source_circular_no": "SEBI/HO/MIRSD/MIRSD-PoD1/P/CIR/2024/95",
+    "referenced_pages": [
+      34,
+      35
+    ],
+    "referenced_paras": [
+      "15.8.1.1",
+      "15.8.1.2"
+    ]
+  },
+  {
+    "s_no": 5,
+    "description": "Provisions related to conciliation proceedings have been incorporated.",
+    "page_para_ref": "Point no. 22, 23 and 37.6 of Annexure 9 ‘Rights and Obligation of Stock brokers and clients’ at page no. 282",
+    "source_circular_no": null,
+    "referenced_pages": [
+      282
+    ],
+    "referenced_paras": []
+  }
+]

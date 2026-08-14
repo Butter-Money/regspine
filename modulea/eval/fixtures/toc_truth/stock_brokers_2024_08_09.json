@@ -1,0 +1,982 @@
+[
+  {
+    "block": "body",
+    "part": "I",
+    "section_no": 1,
+    "title": "Registration of Brokers – Verification of antecedents of the applicant",
+    "start_page": 10
+  },
+  {
+    "block": "body",
+    "part": "I",
+    "section_no": 2,
+    "title": "Conversion of individual membership into corporate membership",
+    "start_page": 10
+  },
+  {
+    "block": "body",
+    "part": "I",
+    "section_no": 3,
+    "title": "Additional information to be submitted at the time of registration of Stock Broker with SEBI",
+    "start_page": 10
+  },
+  {
+    "block": "body",
+    "part": "I",
+    "section_no": 4,
+    "title": "Additional requirements for processing applications of Stock Brokers for Registration/ Prior approval for sale of membership/ Change of name/ Trade name",
+    "start_page": 11
+  },
+  {
+    "block": "body",
+    "part": "I",
+    "section_no": 5,
+    "title": "Merger/ Amalgamation of Trading Members",
+    "start_page": 12
+  },
+  {
+    "block": "body",
+    "part": "I",
+    "section_no": 6,
+    "title": "Admission of Limited Liability Partnerships as Members of Stock Exchanges",
+    "start_page": 13
+  },
+  {
+    "block": "body",
+    "part": "I",
+    "section_no": 7,
+    "title": "Single registration for Stock Brokers & Clearing Members",
+    "start_page": 13
+  },
+  {
+    "block": "body",
+    "part": "I",
+    "section_no": 8,
+    "title": "Registration of Members of Commodity Derivatives Exchanges",
+    "start_page": 15
+  },
+  {
+    "block": "body",
+    "part": "I",
+    "section_no": 9,
+    "title": "Integration of broking activities in Equity Markets and Commodity Derivatives Markets under single entity",
+    "start_page": 15
+  },
+  {
+    "block": "body",
+    "part": "I",
+    "section_no": 10,
+    "title": "Uniform membership structure across segments",
+    "start_page": 16
+  },
+  {
+    "block": "body",
+    "part": "I",
+    "section_no": 11,
+    "title": "Online Registration Mechanism for Securities Market Intermediaries",
+    "start_page": 17
+  },
+  {
+    "block": "body",
+    "part": "I",
+    "section_no": 12,
+    "title": "Transfer of business by SEBI Registered intermediaries to other legal entity",
+    "start_page": 17
+  },
+  {
+    "block": "body",
+    "part": "II",
+    "section_no": 13,
+    "title": "Oversight of Members (Stock Brokers/Trading Members/Clearing Members of any Segment of Stock Exchanges and Clearing Corporations)",
+    "start_page": 19
+  },
+  {
+    "block": "body",
+    "part": "II",
+    "section_no": 14,
+    "title": "Policy of Annual Inspection of Members by Stock Exchanges/Clearing Corporations",
+    "start_page": 22
+  },
+  {
+    "block": "body",
+    "part": "II",
+    "section_no": 15,
+    "title": "Enhanced Supervision of Stock Brokers / Depository Participants",
+    "start_page": 24
+  },
+  {
+    "block": "body",
+    "part": "II",
+    "section_no": 16,
+    "title": "Annual System Audit of Stock Brokers / Trading Members",
+    "start_page": 38
+  },
+  {
+    "block": "body",
+    "part": "II",
+    "section_no": 17,
+    "title": "Early Warning Mechanism to prevent diversion of client securities",
+    "start_page": 42
+  },
+  {
+    "block": "body",
+    "part": "II",
+    "section_no": 18,
+    "title": "Enhanced obligations and responsibilities on Qualified Stock Brokers (QSBs)",
+    "start_page": 46
+  },
+  {
+    "block": "body",
+    "part": "III",
+    "section_no": 19,
+    "title": "Unique Client Code",
+    "start_page": 57
+  },
+  {
+    "block": "body",
+    "part": "III",
+    "section_no": 20,
+    "title": "Simplification And Rationalization Of Trading Account Opening Process",
+    "start_page": 58
+  },
+  {
+    "block": "body",
+    "part": "III",
+    "section_no": 21,
+    "title": "Nomination for Eligible Trading Accounts",
+    "start_page": 62
+  },
+  {
+    "block": "body",
+    "part": "III",
+    "section_no": 22,
+    "title": "Requirements relating to dealings between a Client and a Stock Broker (Trading Members included)",
+    "start_page": 63
+  },
+  {
+    "block": "body",
+    "part": "III",
+    "section_no": 23,
+    "title": "Regulation of Transactions Between Clients and Brokers",
+    "start_page": 67
+  },
+  {
+    "block": "body",
+    "part": "III",
+    "section_no": 24,
+    "title": "Collateral deposited by Clients with Brokers",
+    "start_page": 69
+  },
+  {
+    "block": "body",
+    "part": "III",
+    "section_no": 25,
+    "title": "Severance of connections with other businesses",
+    "start_page": 70
+  },
+  {
+    "block": "body",
+    "part": "III",
+    "section_no": 26,
+    "title": "Applicability of Rule 8(1)(f) and 8(3)(f) of the Securities Contract (Regulation) Rules, 1957",
+    "start_page": 70
+  },
+  {
+    "block": "body",
+    "part": "III",
+    "section_no": 27,
+    "title": "Mode of payment and delivery",
+    "start_page": 71
+  },
+  {
+    "block": "body",
+    "part": "III",
+    "section_no": 28,
+    "title": "Pre- funded instruments / Electronic fund transfers",
+    "start_page": 71
+  },
+  {
+    "block": "body",
+    "part": "III",
+    "section_no": 29,
+    "title": "Disclosure of proprietary trading by Broker to Client",
+    "start_page": 72
+  },
+  {
+    "block": "body",
+    "part": "III",
+    "section_no": 30,
+    "title": "“Pro – account” trading terminal",
+    "start_page": 72
+  },
+  {
+    "block": "body",
+    "part": "III",
+    "section_no": 31,
+    "title": "Review of norms relating to trading by Members/ Sub-Brokers",
+    "start_page": 73
+  },
+  {
+    "block": "body",
+    "part": "III",
+    "section_no": 32,
+    "title": "Market Access through Authorised Persons",
+    "start_page": 74
+  },
+  {
+    "block": "body",
+    "part": "III",
+    "section_no": 33,
+    "title": "SMS and E-mail alerts to investors by Stock Exchanges",
+    "start_page": 78
+  },
+  {
+    "block": "body",
+    "part": "III",
+    "section_no": 34,
+    "title": "Prevention of Unauthorised Trading by Stock Brokers",
+    "start_page": 80
+  },
+  {
+    "block": "body",
+    "part": "III",
+    "section_no": 35,
+    "title": "Execution of Power of Attorney (PoA) by the Client in favour of the Stock Broker/ Stock Broker and Depository Participant",
+    "start_page": 81
+  },
+  {
+    "block": "body",
+    "part": "III",
+    "section_no": 36,
+    "title": "Execution of ‘Demat Debit and Pledge Instruction’ (DDPI) for transfer of securities towards deliveries / settlement obligations and pledging / re- pledging of securities",
+    "start_page": 86
+  },
+  {
+    "block": "body",
+    "part": "III",
+    "section_no": 37,
+    "title": "Modification of Client Codes of Non-institutional Trades Executed on Stock Exchanges (All Segments)",
+    "start_page": 88
+  },
+  {
+    "block": "body",
+    "part": "III",
+    "section_no": 38,
+    "title": "Margin Trading Facility",
+    "start_page": 90
+  },
+  {
+    "block": "body",
+    "part": "III",
+    "section_no": 39,
+    "title": "Collection and reporting of margins by Trading Member (TM) /Clearing Member (CM) in Cash Segment",
+    "start_page": 95
+  },
+  {
+    "block": "body",
+    "part": "III",
+    "section_no": 40,
+    "title": "Framework to Enable Verification of Upfront Collection of Margins from Clients in Cash and Derivatives segments",
+    "start_page": 97
+  },
+  {
+    "block": "body",
+    "part": "III",
+    "section_no": 41,
+    "title": "Margin obligation to be given by way of Pledge/ Re-pledge in the Depository System",
+    "start_page": 98
+  },
+  {
+    "block": "body",
+    "part": "III",
+    "section_no": 42,
+    "title": "Segregation and Monitoring of Collateral at Client Level",
+    "start_page": 105
+  },
+  {
+    "block": "body",
+    "part": "III",
+    "section_no": 43,
+    "title": "Maintenance of current accounts in multiple banks by Stock Brokers",
+    "start_page": 116
+  },
+  {
+    "block": "body",
+    "part": "III",
+    "section_no": 44,
+    "title": "Block Mechanism in demat account of clients undertaking sale transactions",
+    "start_page": 116
+  },
+  {
+    "block": "body",
+    "part": "III",
+    "section_no": 45,
+    "title": "Handling of Client’s Securities by Trading Members/ Clearing Members",
+    "start_page": 118
+  },
+  {
+    "block": "body",
+    "part": "III",
+    "section_no": 46,
+    "title": "Validation of Instructions for Pay-In of Securities from Client demat account to Trading Member (TM) Pool Account against obligations received from the Clearing Corporations",
+    "start_page": 120
+  },
+  {
+    "block": "body",
+    "part": "III",
+    "section_no": 47,
+    "title": "Settlement of Running Account of Client’s Funds lying with Trading Member (TM)",
+    "start_page": 122
+  },
+  {
+    "block": "body",
+    "part": "III",
+    "section_no": 48,
+    "title": "Risk disclosure with respect to trading by individual traders in Equity Futures & Options Segment",
+    "start_page": 124
+  },
+  {
+    "block": "body",
+    "part": "III",
+    "section_no": 49,
+    "title": "Ease of Doing Investments by Investors - Facility of voluntary freezing/ blocking of Trading Accounts by Clients",
+    "start_page": 125
+  },
+  {
+    "block": "body",
+    "part": "III",
+    "section_no": 50,
+    "title": "Enhancement of operational efficiency and Risk Reduction-Pay-out of securities directly to client demat account",
+    "start_page": 126
+  },
+  {
+    "block": "body",
+    "part": "III",
+    "section_no": 51,
+    "title": "Electronic Contract Note",
+    "start_page": 127
+  },
+  {
+    "block": "body",
+    "part": "IV",
+    "section_no": 52,
+    "title": "Conditions to be met by Broker for providing Internet Based Trading Service",
+    "start_page": 130
+  },
+  {
+    "block": "body",
+    "part": "IV",
+    "section_no": 53,
+    "title": "Securities Trading through Wireless medium on Wireless Application Protocol (WAP) platform",
+    "start_page": 135
+  },
+  {
+    "block": "body",
+    "part": "IV",
+    "section_no": 54,
+    "title": "Securities Trading using Wireless Technology",
+    "start_page": 137
+  },
+  {
+    "block": "body",
+    "part": "IV",
+    "section_no": 55,
+    "title": "Additional Requirements for Internet Based Trading (IBT) and Securities trading using Wireless Technology (STWT)",
+    "start_page": 139
+  },
+  {
+    "block": "body",
+    "part": "IV",
+    "section_no": 56,
+    "title": "Direct Market Access facility",
+    "start_page": 140
+  },
+  {
+    "block": "body",
+    "part": "IV",
+    "section_no": 57,
+    "title": "Smart Order Routing",
+    "start_page": 151
+  },
+  {
+    "block": "body",
+    "part": "IV",
+    "section_no": 58,
+    "title": "Broad Guidelines on Algorithmic Trading",
+    "start_page": 154
+  },
+  {
+    "block": "body",
+    "part": "IV",
+    "section_no": 59,
+    "title": "Testing of Software used in or related to Trading and Risk Management",
+    "start_page": 159
+  },
+  {
+    "block": "body",
+    "part": "IV",
+    "section_no": 60,
+    "title": "Safeguards to avoid trading disruption in case of failure of software vendor",
+    "start_page": 165
+  },
+  {
+    "block": "body",
+    "part": "IV",
+    "section_no": 61,
+    "title": "Cyber Security and Cyber resilience framework for Stock Brokers",
+    "start_page": 166
+  },
+  {
+    "block": "body",
+    "part": "IV",
+    "section_no": 62,
+    "title": "Reporting for Artificial Intelligence (AI) and Machine Learning (ML) applications and systems offered and used by market intermediaries",
+    "start_page": 180
+  },
+  {
+    "block": "body",
+    "part": "IV",
+    "section_no": 63,
+    "title": "Advisory for Financial Sector Organizations regarding Software as a Service(SaaS) based solutions",
+    "start_page": 181
+  },
+  {
+    "block": "body",
+    "part": "IV",
+    "section_no": 64,
+    "title": "Framework to address the ‘technical glitches’ in Stock Brokers’ Electronic Trading Systems",
+    "start_page": 182
+  },
+  {
+    "block": "body",
+    "part": "IV",
+    "section_no": 65,
+    "title": "Advisory for SEBI Regulated Entities (REs) regarding Cybersecurity best practices",
+    "start_page": 187
+  },
+  {
+    "block": "body",
+    "part": "IV",
+    "section_no": 66,
+    "title": "Framework for Adoption of Cloud Services by SEBI Regulated Entities (REs)",
+    "start_page": 188
+  },
+  {
+    "block": "body",
+    "part": "V",
+    "section_no": 67,
+    "title": "Periodical Report – Grant of prior approval to members of Stock Exchanges",
+    "start_page": 192
+  },
+  {
+    "block": "body",
+    "part": "V",
+    "section_no": 68,
+    "title": "Procedure for seeking prior approval for change in control",
+    "start_page": 193
+  },
+  {
+    "block": "body",
+    "part": "V",
+    "section_no": 69,
+    "title": "Guidelines for seeking NOC by Stock Brokers / Clearing Members for setting up Wholly Owned Subsidiaries, Step Down Subsidiaries, Joint Ventures in GIFT IFSC",
+    "start_page": 196
+  },
+  {
+    "block": "body",
+    "part": "VI",
+    "section_no": 70,
+    "title": "Inter-Governmental Agreement with United States of America under Foreign Accounts Tax Compliance Act – Registration",
+    "start_page": 198
+  },
+  {
+    "block": "body",
+    "part": "VI",
+    "section_no": 71,
+    "title": "Implementation of the Multilateral Competent Authority Agreement and Foreign Account Tax Compliance Act",
+    "start_page": 199
+  },
+  {
+    "block": "body",
+    "part": "VII",
+    "section_no": 72,
+    "title": "Exclusive e-mail ID for redressal of Investor Complaints",
+    "start_page": 201
+  },
+  {
+    "block": "body",
+    "part": "VII",
+    "section_no": 73,
+    "title": "Redressal of investor complaints against Stock Brokers in SEBI Complaints Redress System (SCORES)",
+    "start_page": 201
+  },
+  {
+    "block": "body",
+    "part": "VII",
+    "section_no": 74,
+    "title": "Information regarding Grievance Redressal Mechanism",
+    "start_page": 202
+  },
+  {
+    "block": "body",
+    "part": "VII",
+    "section_no": 75,
+    "title": "Publishing Investor Charter and disclosure of Investor Complaints by Stock Brokers on their websites",
+    "start_page": 202
+  },
+  {
+    "block": "body",
+    "part": "VIII",
+    "section_no": 76,
+    "title": "Standard operating procedure in the cases of Trading Member / Clearing Member leading to default",
+    "start_page": 203
+  },
+  {
+    "block": "body",
+    "part": "VIII",
+    "section_no": 77,
+    "title": "Recovery of assets of defaulter member and recovery of funds from debit balance clients of defaulter member for meeting the obligations of clients / Stock Exchange / Clearing Corporation",
+    "start_page": 211
+  },
+  {
+    "block": "body",
+    "part": "IX",
+    "section_no": 78,
+    "title": "Advertisement by Brokers and grant of trading terminals",
+    "start_page": 212
+  },
+  {
+    "block": "body",
+    "part": "IX",
+    "section_no": 79,
+    "title": "Registration Number of Brokers to be quoted on all correspondences with SEBI",
+    "start_page": 212
+  },
+  {
+    "block": "body",
+    "part": "IX",
+    "section_no": 80,
+    "title": "Maintenance of books of accounts and other documents sought by Enforcement Agencies from Stock Exchanges and Brokers",
+    "start_page": 212
+  },
+  {
+    "block": "body",
+    "part": "IX",
+    "section_no": 81,
+    "title": "Display of details by Stock Brokers (including Trading Members)",
+    "start_page": 213
+  },
+  {
+    "block": "body",
+    "part": "IX",
+    "section_no": 82,
+    "title": "Unauthenticated news circulated by SEBI Registered Market Intermediaries through various modes of communication",
+    "start_page": 213
+  },
+  {
+    "block": "body",
+    "part": "IX",
+    "section_no": 83,
+    "title": "Guidelines on Outsourcing of Activities by Stock Brokers",
+    "start_page": 214
+  },
+  {
+    "block": "body",
+    "part": "IX",
+    "section_no": 84,
+    "title": "General Guidelines for dealing with Conflicts of Interest of Stock Brokers and their Associated Persons in Securities Market",
+    "start_page": 222
+  },
+  {
+    "block": "body",
+    "part": "IX",
+    "section_no": 85,
+    "title": "Digital Mode of Payment",
+    "start_page": 224
+  },
+  {
+    "block": "body",
+    "part": "IX",
+    "section_no": 86,
+    "title": "Regulatory Framework for Commodity Derivatives Brokers",
+    "start_page": 224
+  },
+  {
+    "block": "body",
+    "part": "IX",
+    "section_no": 87,
+    "title": "Approach to securities market data access and terms of usage of data provided by data sources in Indian securities market",
+    "start_page": 225
+  },
+  {
+    "block": "body",
+    "part": "IX",
+    "section_no": 88,
+    "title": "Introduction of Investor Risk Reduction Access (IRRA) platform in case of disruption of trading services provided by the Trading Member (TM)",
+    "start_page": 225
+  },
+  {
+    "block": "body",
+    "part": "IX",
+    "section_no": 89,
+    "title": "Maintenance of a website by stock brokers",
+    "start_page": 228
+  },
+  {
+    "block": "body",
+    "part": "IX",
+    "section_no": 90,
+    "title": "Framework for Regulatory Sandbox",
+    "start_page": 229
+  },
+  {
+    "block": "body",
+    "part": "IX",
+    "section_no": 91,
+    "title": "Transactions in Corporate Bonds through Request for Quote (RFQ) platform by Stock Brokers (SBs)",
+    "start_page": 229
+  },
+  {
+    "block": "body",
+    "part": "IX",
+    "section_no": 92,
+    "title": "Bank Guarantees (BGs) created out of clients’ funds",
+    "start_page": 230
+  },
+  {
+    "block": "body",
+    "part": "IX",
+    "section_no": 93,
+    "title": "Upstreaming of clients’ funds by Stock Brokers (SBs) / Clearing Members (CMs) to Clearing Corporations (CCs)",
+    "start_page": 231
+  },
+  {
+    "block": "body",
+    "part": "IX",
+    "section_no": 94,
+    "title": "Measures to instil confidence in securities market – Brokers’ Institutional mechanism for prevention and detection of fraud or market abuse",
+    "start_page": 234
+  },
+  {
+    "block": "annexure",
+    "part": null,
+    "section_no": 1,
+    "title": "Annexure-1 - Additional information to be submitted at the time of registration of Stock Broker with SEBI",
+    "start_page": 243
+  },
+  {
+    "block": "annexure",
+    "part": null,
+    "section_no": 2,
+    "title": "Annexure-2 – An Illustrative list of common violations/deficiencies observed by SEBI in its inspections of members",
+    "start_page": 249
+  },
+  {
+    "block": "annexure",
+    "part": null,
+    "section_no": 3,
+    "title": "Annexure-3 - Stock Broker System Audit Framework - Terms of Reference (ToR) for Type I Broker Annexure-4 - Stock Broker System Audit Framework – ToR for Type II 258",
+    "start_page": 253
+  },
+  {
+    "block": "annexure",
+    "part": null,
+    "section_no": 4,
+    "title": "Annexure-4 - Stock Broker System Audit Framework – ToR for Type II Broker",
+    "start_page": 258
+  },
+  {
+    "block": "annexure",
+    "part": null,
+    "section_no": 5,
+    "title": "Annexure-5 - Stock Broker System Audit Framework – ToR for Type III Broker",
+    "start_page": 265
+  },
+  {
+    "block": "annexure",
+    "part": null,
+    "section_no": 6,
+    "title": "Annexure-6 - Stock Broker System Audit Framework – Executive Summary Reporting Format",
+    "start_page": 274
+  },
+  {
+    "block": "annexure",
+    "part": null,
+    "section_no": 7,
+    "title": "Annexure-7 - Index of documents giving details of various documents for client account opening process",
+    "start_page": 276
+  },
+  {
+    "block": "annexure",
+    "part": null,
+    "section_no": 8,
+    "title": "Annexure-8 - Additional information about the client related to trading account",
+    "start_page": 278
+  },
+  {
+    "block": "annexure",
+    "part": null,
+    "section_no": 9,
+    "title": "Annexure-9 - Rights & Obligations of stock broker, and client for trading on exchanges (including additional rights & obligations in case of internet / wireless technology based trading)",
+    "start_page": 282
+  },
+  {
+    "block": "annexure",
+    "part": null,
+    "section_no": 10,
+    "title": "Annexure-10 - Uniform Risk Disclosure Documents (for all segments / exchanges)",
+    "start_page": 289
+  },
+  {
+    "block": "annexure",
+    "part": null,
+    "section_no": 11,
+    "title": "Annexure-11- Guidance Note detailing Do’s and Don’ts for trading on exchange(s) for investors",
+    "start_page": 295
+  },
+  {
+    "block": "annexure",
+    "part": null,
+    "section_no": 12,
+    "title": "Annexure-12 - Format for nomination form",
+    "start_page": 297
+  },
+  {
+    "block": "annexure",
+    "part": null,
+    "section_no": 13,
+    "title": "Annexure-13 - Declaration Form for opting out of nomination",
+    "start_page": 299
+  },
+  {
+    "block": "annexure",
+    "part": null,
+    "section_no": 14,
+    "title": "Annexure-14 - Demat Debit and Pledge Instruction",
+    "start_page": 300
+  },
+  {
+    "block": "annexure",
+    "part": null,
+    "section_no": 15,
+    "title": "Annexure-15 - Format of the Daily Reporting by the members to the Exchange on the amount financed by them under the Margin Trading Facility",
+    "start_page": 301
+  },
+  {
+    "block": "annexure",
+    "part": null,
+    "section_no": 16,
+    "title": "Annexure-16 - Allocation of collateral",
+    "start_page": 302
+  },
+  {
+    "block": "annexure",
+    "part": null,
+    "section_no": 17,
+    "title": "Annexure-17 – Monitoring of the minimum 50% cash-equivalent collateral requirement",
+    "start_page": 304
+  },
+  {
+    "block": "annexure",
+    "part": null,
+    "section_no": 18,
+    "title": "Annexure-18 - Blocking of margins",
+    "start_page": 306
+  },
+  {
+    "block": "annexure",
+    "part": null,
+    "section_no": 19,
+    "title": "Annexure-19 - Monitoring of risk reduction mode",
+    "start_page": 308
+  },
+  {
+    "block": "annexure",
+    "part": null,
+    "section_no": 20,
+    "title": "Annexure-20 – Change of Allocation",
+    "start_page": 310
+  },
+  {
+    "block": "annexure",
+    "part": null,
+    "section_no": 21,
+    "title": "Annexure-21 - Procedures to be followed in the Stage-2 and the Stage- 3 of Default Management Process",
+    "start_page": 311
+  },
+  {
+    "block": "annexure",
+    "part": null,
+    "section_no": 22,
+    "title": "Annexure-22 - Procedures to be followed in the Stage-4 of Default Management Process",
+    "start_page": 313
+  },
+  {
+    "block": "annexure",
+    "part": null,
+    "section_no": 23,
+    "title": "Annexure-23 - Risk disclosures",
+    "start_page": 316
+  },
+  {
+    "block": "annexure",
+    "part": null,
+    "section_no": 24,
+    "title": "Annexure-24 - Data Format",
+    "start_page": 317
+  },
+  {
+    "block": "annexure",
+    "part": null,
+    "section_no": 25,
+    "title": "Annexure-25 - Incident Reporting Form regarding cyber incidents by stock brokers",
+    "start_page": 319
+  },
+  {
+    "block": "annexure",
+    "part": null,
+    "section_no": 26,
+    "title": "Annexure-26 - Form to report on AI and ML technologies",
+    "start_page": 323
+  },
+  {
+    "block": "annexure",
+    "part": null,
+    "section_no": 28,
+    "title": "Annexure-28 – Consolidated Quarterly Reporting Form",
+    "start_page": 326
+  },
+  {
+    "block": "annexure",
+    "part": null,
+    "section_no": 29,
+    "title": "Annexure-29 – Advisory for Financial Sector Organizations regarding Software as a Service(SaaS) based solutions",
+    "start_page": 327
+  },
+  {
+    "block": "annexure",
+    "part": null,
+    "section_no": 30,
+    "title": "Annexure-30 –Root Cause Analysis (RCA) Form",
+    "start_page": 329
+  },
+  {
+    "block": "annexure",
+    "part": null,
+    "section_no": 31,
+    "title": "Annexure-31 – Advisory for SEBI Regulated Entities (REs) regarding Cybersecurity best practices",
+    "start_page": 331
+  },
+  {
+    "block": "annexure",
+    "part": null,
+    "section_no": 32,
+    "title": "Annexure-32 - Framework for Adoption of Cloud Services by SEBI Regulated Entities (REs)",
+    "start_page": 334
+  },
+  {
+    "block": "annexure",
+    "part": null,
+    "section_no": 33,
+    "title": "Annexure-33 - Format for reporting changes in \"status or constitution\" of Members",
+    "start_page": 379
+  },
+  {
+    "block": "annexure",
+    "part": null,
+    "section_no": 34,
+    "title": "Annexure-34 - Declaration cum undertaking",
+    "start_page": 380
+  },
+  {
+    "block": "annexure",
+    "part": null,
+    "section_no": 35,
+    "title": "Annexure-35 – Application to SEBI for opening of wholly owned subsidiaries, step down subsidiaries or entering into joint ventures in GIFT IFSC",
+    "start_page": 382
+  },
+  {
+    "block": "annexure",
+    "part": null,
+    "section_no": 36,
+    "title": "Annexure-36 - Information regarding Grievance Redressal Mechanism",
+    "start_page": 386
+  },
+  {
+    "block": "annexure",
+    "part": null,
+    "section_no": 37,
+    "title": "Annexure-37 - Investor Charter - Stock Brokers",
+    "start_page": 387
+  },
+  {
+    "block": "annexure",
+    "part": null,
+    "section_no": 38,
+    "title": "Annexure-38 – Format for Investor Complaints Data to be displayed by Stock Brokers on their respective websites",
+    "start_page": 394
+  },
+  {
+    "block": "annexure",
+    "part": null,
+    "section_no": 39,
+    "title": "Annexure-39 - Affidavit of undertaking cum indemnity bond to be submitted by member to Stock Exchange / Clearing Corporation",
+    "start_page": 396
+  },
+  {
+    "block": "annexure",
+    "part": null,
+    "section_no": 40,
+    "title": "Annexure-40 - Digital Mode of Payment",
+    "start_page": 399
+  },
+  {
+    "block": "annexure",
+    "part": null,
+    "section_no": 41,
+    "title": "Annexure-41 - Details of FMC circulars which shall stand repealed and relevant SEBI circulars which shall be applicable",
+    "start_page": 400
+  },
+  {
+    "block": "annexure",
+    "part": null,
+    "section_no": 42,
+    "title": "Annexure-42 - Details of FMC circulars contents/norms of which shall continue as they are specific to commodity derivative markets",
+    "start_page": 404
+  },
+  {
+    "block": "annexure",
+    "part": null,
+    "section_no": 43,
+    "title": "Annexure-43 - Details of FMC circulars which shall stand repealed",
+    "start_page": 405
+  },
+  {
+    "block": "annexure",
+    "part": null,
+    "section_no": 44,
+    "title": "Annexure-44 - Terms and conditions for allowing Bank guarantee from clients",
+    "start_page": 406
+  },
+  {
+    "block": "annexure",
+    "part": null,
+    "section_no": 45,
+    "title": "Appendix - List of Circulars / Communication",
+    "start_page": 408
+  },
+  {
+    "block": "annexure",
+    "part": null,
+    "section_no": 27,
+    "title": "Annexure-27 - Systems deemed to be based on AI and ML technology",
+    "start_page": 418
+  },
+  {
+    "block": "annexure",
+    "part": null,
+    "section_no": 46,
+    "title": "Annexure A - List of Changes",
+    "start_page": 418
+  }
+]

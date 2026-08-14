@@ -8,17 +8,29 @@ about where a page starts.
 
 from __future__ import annotations
 
+import json
 import re
 from dataclasses import dataclass, field
+from datetime import datetime, timezone
 
 import pdfplumber
 
-from regspine.common.hashing import dehyphenate, sha256_file
+from regspine.common.hashing import dehyphenate, dom_hash, sha256_file
 from regspine.common.schemas import (
     Block,
+    Clause,
     CoverageGap,
+    CoverageManifest,
+    SebiDom,
     SectionIndexEntry,
 )
+from regspine.ingest.annexure import (
+    find_annexure_a,
+    find_appendix,
+    parse_annexure_a,
+    parse_appendix,
+)
+from regspine.ingest.segment import locate_sections, split_clauses
 from regspine.ingest.toc_repair import recover_text_rows
 from regspine.ingest.skeleton import (
     Header,
@@ -230,3 +242,86 @@ def summarise(entries: list[SectionIndexEntry]) -> dict:
         "parts": parts,
         "distinct_section_numbers": len({e.section_no for e in entries}),
     }
+
+
+# ---------------------------------------------------------------- assembly
+
+def _canonical_json(dom: "SebiDom") -> str:
+    """Deterministic serialisation for hashing.
+
+    ``dom_hash`` and ``ingested_at`` are excluded: the first is the output, and
+    the second is system time, which would make every run differ and defeat the
+    idempotency gate (non-negotiable #2).
+    """
+    payload = dom.model_dump(mode="json", exclude={"dom_hash", "ingested_at"})
+    return json.dumps(payload, sort_keys=True, ensure_ascii=False, separators=(",", ":"))
+
+
+def ingest(path: str) -> SebiDom:
+    """PDF -> SebiDom. The whole deterministic pipeline, spending zero tokens."""
+    doc = load_document(path)
+    entries, toc_gaps = build_section_index(doc)
+
+    toc_pages = find_toc_pages(doc)
+    body_start = doc.pages[toc_pages[-1]].char_start if toc_pages else 0
+    full_text = doc.full_text
+
+    spans, seg_gaps = locate_sections(full_text, entries, body_start)
+
+    clauses: list[Clause] = []
+    for span in spans:
+        clauses.extend(
+            split_clauses(
+                full_text,
+                span,
+                intermediary=doc.header.intermediary,
+                circular_no=doc.header.circular_no,
+                circular_date=doc.header.circular_date,
+                page_of=doc.page_of,
+            )
+        )
+
+    annexure_page = find_annexure_a(doc.pages)
+    annexure_a = parse_annexure_a(doc.pages, annexure_page) if annexure_page else []
+    appendix_page = find_appendix(doc.pages)
+    appendix = parse_appendix(doc.pages, appendix_page) if appendix_page else []
+
+    gaps = [*doc.gaps, *toc_gaps, *seg_gaps]
+    if annexure_page is None:
+        # Not a defect — only Aug-2024 carries a change list — but change
+        # detection into this version has no ground truth, so it must be visible.
+        gaps.append(
+            CoverageGap(
+                page=0,
+                reason="unmatched_heading",
+                detail="no Annexure A (List of Changes); change-detection cannot be validated",
+            )
+        )
+
+    body_expected = sum(1 for e in entries if e.block == "body")
+    coverage = CoverageManifest(
+        document_sha256=doc.sha256,
+        total_pages=len(doc.pages),
+        pages_parsed=sum(1 for p in doc.pages if p.text.strip()),
+        sections_expected=body_expected,
+        sections_found=len(spans),
+        gaps=gaps,
+    )
+
+    dom = SebiDom(
+        document_sha256=doc.sha256,
+        dom_hash="",
+        circular_no=doc.header.circular_no,
+        circular_date=doc.header.circular_date,
+        intermediary=doc.header.intermediary,
+        supersedes_circular_no=None,
+        total_pages=len(doc.pages),
+        section_index=entries,
+        clauses=clauses,
+        annexure_a=annexure_a,
+        appendix=appendix,
+        coverage=coverage,
+    )
+    dom.dom_hash = dom_hash(_canonical_json(dom))
+    dom.ingested_at = datetime.now(timezone.utc)
+    return dom

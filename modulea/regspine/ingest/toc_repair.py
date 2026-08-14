@@ -26,6 +26,8 @@ from __future__ import annotations
 import re
 from dataclasses import dataclass
 
+from regspine.ingest.skeleton import clean_title
+
 # "26. 70"  -> number + page, title wrapped around it
 RE_NUM_PAGE = re.compile(r"^\s*(\d{1,3})\.\s+(\d{1,4})\s*$")
 # "52."     -> number alone
@@ -98,8 +100,7 @@ def recover_orphan_rows(page_text: str) -> list[RecoveredRow]:
             after.append(lines[k].strip())
             k += 1
 
-        title = " ".join(p for p in ([before] + after) if p).strip()
-        title = re.sub(r"\s+", " ", title)
+        title = clean_title(" ".join(p for p in ([before] + after) if p))
 
         # A recovered row without a title is not a row; leave it for the manifest.
         if title and page:
@@ -124,7 +125,7 @@ def recover_complete_rows(page_text: str) -> list[RecoveredRow]:
         s = line.strip()
         if not (m := RE_FULL_ROW.match(s)):
             continue
-        title = re.sub(r"\s+", " ", m.group(2)).strip()
+        title = clean_title(m.group(2))
         # Guard against a wrapped title fragment that happens to end in a number.
         if not title or title[0].isdigit():
             continue
@@ -157,7 +158,7 @@ def recover_pageless_rows(page_text: str) -> list[RecoveredRow]:
             continue  # handled by the other passes
         if not (m := re.match(r"^\s*(\d{1,3})\.\s+(\S.*?)\s*$", s)):
             continue
-        title = re.sub(r"\s+", " ", m.group(2)).strip()
+        title = clean_title(m.group(2))
         if not title or title[0].isdigit():
             continue
         out.append(
